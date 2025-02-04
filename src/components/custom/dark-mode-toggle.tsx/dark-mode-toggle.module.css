@@ -21,7 +21,7 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: #2b2b2b;
+  background-color: hsl(var(--sidebar-background));
   border: 2px solid #5b5b5b; /* Reduced border size */
   border-radius: 9999px;
   cursor: pointer;
@@ -32,7 +32,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateX(72%);
+  /* transform: translate(-50%, -50%) translateX(72%); to switch for the dark mode */
+  animation: sun 1s linear ;
+  animation-fill-mode: forwards;
+
   display: block;
   width: 18px; /* Reduced indicator size */
   height: 18px; /* Reduced indicator size */
@@ -73,8 +76,8 @@
   top: 53%;
   left: 50%;
   display: block;
-  width: 2px; /* Reduced size */
-  height: 2px; /* Reduced size */
+  width: 3px; /* Reduced size */
+  height: 3px; /* Reduced size */
   background-color: #ffffff;
   border-radius: 9999px;
   animation: twinkle 0.8s infinite -0.6s;
@@ -86,7 +89,7 @@
   position: absolute;
   display: block;
   content: '';
-  width: 3px; /* Reduced size */
+  width: 2px; /* Reduced size */
   height: 3px; /* Reduced size */
   background-color: #ffffff;
   border-radius: 9999px;
@@ -122,10 +125,13 @@
   border-color: #347cf8;
 }
 
+
 .switch__input:checked + .switch__label .switch__indicator {
   background-color: #ecd21f;
   box-shadow: none;
-  transform: translate(-50%, -50%) translateX(-72%); /* Move the indicator to the left */
+ /*transform: translate(-50%, -50%) translateX(-72%); Move the indicator to the left */
+ animation: moon 1s linear ;
+ animation-fill-mode: forwards;
 }
 
 .switch__input:checked + .switch__label .switch__indicator::before,
@@ -171,12 +177,64 @@
 
 @keyframes cloud {
   0% {
-    transform: translate(0%, -50%);
+    transform: translate(-10%, -50%);
   }
   50% {
-    transform: translate(-50%, -50%);
+    transform: translate(-65%, -50%);
   }
   100% {
-    transform: translate(0%, -50%);
+    transform: translate(-10%, -50%);
+  }
+}
+
+
+
+@keyframes moon {
+  0% {
+    transform: translate(-50%, -50%) translateX(72%) translateY(0); /* Start on right side */
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(45%) translateY(25%); /* Start descending */
+  }
+  40% {
+    transform: translate(-50%, -50%) translateX(20%) translateY(45%); /* Deep underground */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(0) translateY(50%); /* Lowest point (center) */
+  }
+  60% {
+    transform: translate(-50%, -50%) translateX(-20%) translateY(45%); /* Start ascending */
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(-45%) translateY(25%); 
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(-72%) translateY(0); /* End on left side */
+  }
+
+}
+
+@keyframes sun {
+
+  0% {
+    transform: translate(-50%, -50%) translateX(-72%) translateY(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(-45%) translateY(-25%); /* Lower ascent */
+  }
+  40% {
+    transform: translate(-50%, -50%) translateX(-20%) translateY(-45%); /* Reduced peak height */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(0) translateY(-50%); /* Central dip (lowest point) */
+  }
+  60% {
+    transform: translate(-50%, -50%) translateX(20%) translateY(-45%); /* Mirror of 40% */
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(45%) translateY(-25%); /* Mirror of 25% */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(72%) translateY(0);
   }
 }

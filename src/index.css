@@ -10,7 +10,8 @@ body {
 
 
 :root {
-    --background: 0 0% 93%;
+    /* --background: 0 0% 93%; */
+    --background: transparent;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -50,7 +51,8 @@ body {
 
 
   .dark {
-    --background:  240 4% 16%; /* zinc 800  used for background*/
+   /* --background:  240 4% 16%;  zinc 800  used for background*/
+    --background: transparent;
     --foreground: 0 0% 98%; /* white used for text */
     --card: 0 0% 3.9%; /* used for card background */
     --card-foreground: 0 0% 98%; /* used for card text */
@@ -110,7 +112,8 @@ body {
     @apply bg-background text-foreground;
   }
   :root {
-    --sidebar-background: 0 0% 98%;
+    /* --sidebar-background: 0 0% 98%; */
+    --side-background: transparent;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
@@ -119,8 +122,10 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  
   .dark {
-    --sidebar-background: 240 5.9% 10%;
+    /* --sidebar-background: 240 5.9% 10%; */
+    --sidebar-background: transparent;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
