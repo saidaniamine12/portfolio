@@ -6,6 +6,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import DarkModeToggle from "./dark-mode-toggle.tsx/dark-mode-toggle";
 
 export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -157,16 +158,7 @@ export function NavbarDefault() {
           >
             <span>Log In</span>
           </Button>
-          <Button
-            variant="gradient"
-            size="sm"
-            placeholder=""
-            onPointerEnterCapture={() => {}}
-            onPointerLeaveCapture={() => {}}
-            className="hidden lg:inline-block"
-          >
-            <span>Sign in</span>
-          </Button>
+          <DarkModeToggle />
         </div>
         <IconButton
           variant="text"
@@ -209,7 +201,7 @@ export function NavbarDefault() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      {/* <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
           <div className="flex items-center gap-x-1">
@@ -237,7 +229,7 @@ export function NavbarDefault() {
             </Button>
           </div>
         </div>
-      </MobileNav>
+      </MobileNav> */}
     </Navbar>
   );
 }
