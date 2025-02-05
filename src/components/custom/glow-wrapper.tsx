@@ -3,7 +3,13 @@ import styled from "styled-components";
 import "@/App.css";
 import { ReactNode } from "react";
 
-const GlowWrapper = ({ children }: { children: ReactNode }) => {
+const GlowWrapper = ({
+  children,
+  style,
+}: {
+  children: ReactNode;
+  style: React.CSSProperties;
+}) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const baseColor = [255, 220, 139];
   const circleSpacing = 6;
@@ -64,6 +70,7 @@ const GlowWrapper = ({ children }: { children: ReactNode }) => {
       ref={wrapperRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      style={style}
     >
       {children}
     </GlowContainer>
@@ -71,7 +78,6 @@ const GlowWrapper = ({ children }: { children: ReactNode }) => {
 };
 
 const GlowContainer = styled.div`
-  border-radius: "13px";
   width: 100%;
   height: 100%;
   position: relative;

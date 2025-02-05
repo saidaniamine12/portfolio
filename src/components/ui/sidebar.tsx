@@ -238,9 +238,11 @@ const Sidebar = React.forwardRef<
         />
         <div
           onMouseEnter={() => {
+            if (isMobile) return;
             setOpen(true);
           }}
           onMouseLeave={() => {
+            if (isMobile) return;
             setOpen(false);
           }}
           className={cn(
