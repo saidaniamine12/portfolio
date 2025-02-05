@@ -1,0 +1,5 @@
+.noShadowOverRide {
+  --tw-shadow: none !important;
+--tw-shadow-colored: none !important;
+box-shadow: none !important;
+};
