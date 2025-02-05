@@ -11,13 +11,7 @@ const DynamicNavbarWrapper = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      //console.log(window.scrollY, isScrolled);
-      if (isScrolledRef.current) {
-        console.log("true");
-      } else {
-        console.log("false");
-      }
-      const isScrolled = window.scrollY > 22 || open;
+      const isScrolled = window.scrollY > 32 || open;
       if (isScrolledRef.current !== isScrolled) {
         isScrolledRef.current = isScrolled;
         setIsScrolled(isScrolled);
