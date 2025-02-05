@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
   IconButton,
+  MobileNav,
 } from "@material-tailwind/react";
 import DarkModeToggle from "../dark-mode-toggle.tsx/dark-mode-toggle";
-import styles from "./navbar.module.css";
-import GlowWrapper from "../glow-wrapper";
 import { none } from "@tsparticles/engine";
-import { useSidebar } from "@/components/ui/sidebar";
+import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 
 export function NavbarDefault() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -145,6 +143,7 @@ export function NavbarDefault() {
       className="px-4 py-1 lg:px-8 lg:py-4"
     >
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+        <SidebarTrigger className="-ml-1" />
         <Typography
           as="a"
           href="#"
@@ -167,6 +166,7 @@ export function NavbarDefault() {
           >
             <span>Log In</span>
           </Button>
+          {/*  dark mode button */}
           <DarkModeToggle />
         </div>
         <IconButton
@@ -210,7 +210,7 @@ export function NavbarDefault() {
           )}
         </IconButton>
       </div>
-      {/* <MobileNav open={openNav}>
+      <MobileNav open={openNav}>
         <div className="container mx-auto">
           {navList}
           <div className="flex items-center gap-x-1">
@@ -238,7 +238,7 @@ export function NavbarDefault() {
             </Button>
           </div>
         </div>
-      </MobileNav> */}
+      </MobileNav>
     </Navbar>
   );
 }

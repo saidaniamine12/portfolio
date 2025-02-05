@@ -1,6 +1,10 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import DynamicNavbarWrapper from "@/components/custom/navbar/dynamic-navbar-wrapper";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 
 export default function Page() {
   return (
@@ -10,7 +14,7 @@ export default function Page() {
       <SidebarInset>
         <header
           style={{ position: "sticky", zIndex: 1000 }}
-          className="flex-row h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 w-full"
+          className="top-0 flex-row h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 w-full"
         >
           <div
             className="flex items-center gap-2 w-full"
