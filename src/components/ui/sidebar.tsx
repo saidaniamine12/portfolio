@@ -3,8 +3,8 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { VariantProps, cva } from "class-variance-authority";
-import { PanelLeft, PanelRightClose } from "lucide-react";
-
+import { AlignJustify } from "lucide-react";
+import "@/App.css";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import StickyNavbar from "../custom/navbar/navbar";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -178,7 +177,7 @@ const Sidebar = React.forwardRef<
     },
     ref
   ) => {
-    const { isMobile, state, openMobile, setOpenMobile, open, setOpen } =
+    const { isMobile, state, openMobile, setOpenMobile, setOpen } =
       useSidebar();
 
     if (collapsible === "none") {
@@ -288,19 +287,13 @@ const SidebarTrigger = React.forwardRef<
       variant="ghost"
       size="icon"
       className={cn("h-10 w-10", className)}
-      // onMouseEnter={(event) => {
-      //   toggleSidebar();
-      // }}
-      // onMouseLeave={(event) => {
-      //   toggleSidebar();
-      // }}
       onClick={(event) => {
         onClick?.(event);
         toggleSidebar();
       }}
       {...props}
     >
-      <PanelRightClose style={{ width: "28px", height: "28px" }} />
+      <AlignJustify className="align-justify-icon" />
 
       <span className="sr-only">Toggle Sidebar</span>
     </Button>

@@ -1,10 +1,6 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import DynamicNavbarWrapper from "@/components/custom/navbar/dynamic-navbar-wrapper";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export default function Page() {
   return (

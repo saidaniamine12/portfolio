@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import GlowWrapper from "../glow-wrapper";
+import GlowWrapper from "./glow-wrapper";
 import { NavbarDefault } from "./navbar";
 import { useSidebar } from "@/components/ui/sidebar";
 
