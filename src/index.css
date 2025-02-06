@@ -140,3 +140,23 @@ body {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+
+
+
+/* do not touch those two, else 
+when you click on a select (dropdown) the dropdown menu will
+will make a data scroll locked on the body and the body and you will now show the scroll bar
+so basiclly the fist forces a scroll bar to be always visible
+the second  does not allow to no margin to be added to the body when the dropdown menu is open
+probleme related to shadcnUI
+fix found here
+https://github.com/shadcn-ui/ui/issues/4227#issuecomment-2438290165
+*/
+html {
+  overflow-y: auto;
+}
+html body[data-scroll-locked] {
+  --removed-body-scroll-bar-size: 0 !important;
+  margin-right: 0 !important;
+} 

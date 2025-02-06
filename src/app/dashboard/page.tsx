@@ -9,7 +9,7 @@ export default function Page() {
 
       <SidebarInset>
         <header
-          style={{ position: "sticky", zIndex: 1000 }}
+          style={{ position: "sticky", zIndex: 10 }}
           className="top-0 flex-row h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 w-full"
         >
           <div
