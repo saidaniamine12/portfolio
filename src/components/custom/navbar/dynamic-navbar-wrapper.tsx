@@ -8,17 +8,18 @@ const DynamicNavbarWrapper = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const borderRadiusRef = useRef("12px");
   const { open, isMobile } = useSidebar();
-  const [width, setWidth] = useState("1280px");
+  const [navbarWidth, setNavbarWidth] = useState<string>();
   const [borderRadius, setBorderRadius] = useState("12px");
   const divRef = useRef<HTMLDivElement>(null);
 
-  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setwindowWidth(window.innerWidth);
+    const handleResize = () => setCurrentWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 32;
@@ -39,40 +40,36 @@ const DynamicNavbarWrapper = () => {
   }, []);
 
   useEffect(() => {
-    console.log("windowWidth", windowWidth);
-    console.log("open", open);
-    console.log("isScrolled", isScrolled);
     if (isMobile) {
-      setWidth("100%");
+      setNavbarWidth("100%");
       setBorderRadius("0px");
     } else {
-      if (windowWidth < 1280) {
-        console.log("windowWidth < 1280");
-        setWidth("100%");
+      if (currentWidth < 1280) {
+        setNavbarWidth("100%");
         borderRadiusRef.current = "0px";
         setBorderRadius("0px");
       } else {
-        setWidth("1280px");
+        setNavbarWidth("1280px");
         if (isScrolled) {
-          setWidth("100%");
+          setNavbarWidth("100%");
           setBorderRadius("0px");
         } else {
           setBorderRadius("12px");
         }
         if (open) {
           setBorderRadius("0px");
-          setWidth("100%");
+          setNavbarWidth("100%");
         }
       }
     }
-  }, [open, isScrolled, isMobile, windowWidth]);
+  }, [open, isScrolled, isMobile, currentWidth]);
 
   return (
     <div
       ref={divRef}
       style={{
         transition: "width 0.3s ease",
-        width: width,
+        width: navbarWidth,
       }}
       className={`flex h-full mx-auto`}
     >

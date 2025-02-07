@@ -74,13 +74,15 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
       // max-w-screen-xl to make it max width 1280px
       className={`px-4 py-1 lg:px-8 ${isScrolled ? "lg:py-1" : "lg:py-4"} `}
     >
-      <div className=" flex items-center justify-between text-blue-gray-900 ">
+      <div className=" flex items-center justify-between  ">
         {/*  side bar trigger */}
-        {isMobile && <SidebarTrigger className="-ml-1" />}
+        {isMobile && (
+          <SidebarTrigger className="-ml-1 mr-1 bg-transparent text-foreground hover:bg-sidebar-accent" />
+        )}
         <Typography
           as="a"
           href="/about"
-          className="flex flex-row display-block gap-2 mr-2  font-medium align-middle flex-shrink-0"
+          className="flex flex-row display-block gap-2 mr-2 pl-4  font-medium align-middle flex-shrink-0"
           placeholder=""
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
@@ -94,7 +96,7 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
           </span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
-        <div className="flex items-center gap-x-6">
+        <div className="flex items-center gap-x-6 pr-4">
           <LanguageSelectButton />
           {/*  dark mode button */}
           <DarkModeToggle />

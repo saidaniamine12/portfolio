@@ -33,7 +33,7 @@ export function NavContactInfo() {
   };
   return (
     <SidebarMenu className="mb-10">
-      <SidebarGroupLabel>
+      <SidebarGroupLabel className="whitespace-nowrap overflow-hidden">
         {language === "EN" ? "Contact info" : "Coordonnées"}
       </SidebarGroupLabel>
       {/* clock */}
