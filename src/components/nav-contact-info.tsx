@@ -1,5 +1,5 @@
 import { Clock, Linkedin, Mail, MapPin, Phone } from "lucide-react";
-
+import styles from "@/components/nav-contact-info.module.css";
 import {
   SidebarGroupLabel,
   SidebarMenu,
@@ -69,8 +69,11 @@ export function NavContactInfo() {
             <SidebarMenuButton variant="default" onClick={handleMailClick}>
               <Mail />
               <Tooltip>
-                <TooltipTrigger className="whitespace-nowrap  truncate">
-                  <span id="amine-mail">
+                <TooltipTrigger className="whitespace-nowrap overflow-hidden ">
+                  <span
+                    id="amine-mail"
+                    className={`${styles["email-animation"]} `}
+                  >
                     mohamedamine.saidani@eniso.u-sousse.tn
                   </span>
                 </TooltipTrigger>

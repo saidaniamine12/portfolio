@@ -30,10 +30,8 @@ const AppBackground = () => {
   useEffect(() => {
     if (theme === "dark") {
       setThemeLoaded(nasaDarkTheme);
-      console.log("dark");
     } else {
       setThemeLoaded(nasaLightTheme);
-      console.log("light");
     }
   }, [theme]);
 

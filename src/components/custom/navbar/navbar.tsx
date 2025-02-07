@@ -79,6 +79,7 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
         {isMobile && (
           <SidebarTrigger className="-ml-1 mr-1 bg-transparent text-foreground hover:bg-sidebar-accent" />
         )}
+        {/*  mohamed amine saidani photo */}
         <Typography
           as="a"
           href="/about"

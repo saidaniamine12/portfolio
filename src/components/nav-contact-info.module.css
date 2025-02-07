@@ -1,0 +1,9 @@
+.email-animation {
+    animation: rightThenLeft 5s linear infinite alternate;
+}
+
+@keyframes rightThenLeft {
+    0%   {margin-left:+2%;}
+    25%   {margin-right:0%;}
+    100%  {margin-left:-20%;}
+}

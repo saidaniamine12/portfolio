@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import mohamed_amine_saidani_resume from "../assets/mohamed_amine_saidani_resume.pdf";
+import mohamed_amine_saidani_resume from "../assets/Mohamed_amine_saidani_resume.pdf";
 import { toast } from "@/hooks/use-toast";
 import { useLanguage } from "./custom/language-select.tsx/language-select-provider";
 
