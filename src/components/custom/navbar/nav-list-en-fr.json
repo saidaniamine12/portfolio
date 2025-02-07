@@ -1,0 +1,56 @@
+{
+    "EN": [
+            {
+                "name": "Education",
+                "link": "/about",
+                "icon": "graduation-cap"
+            },
+            {
+                "name": "Experience",
+                "link": "/contact",
+                "icon": "briefcase-business"
+            },
+            {
+                "name": "Projects",
+                "link": "/projects",
+                "icon": "pickaxe"
+            },
+            {
+                "name": "Skills",
+                "link": "/contact",
+                "icon": "broo"
+            },
+            {
+                "name": "Contact",
+                "link": "/contact",
+                "icon": "send"
+            }
+        ],
+    "FR": [
+                {
+                    "name": "Éducation",
+                    "link": "/about",
+                    "icon": "graduation-cap"
+                },
+                {
+                    "name": "Expérience",
+                    "link": "/contact",
+                    "icon": "briefcase-business"
+                },
+                {
+                    "name": "Projets",
+                    "link": "/projects",
+                    "icon": "pickaxe"
+                },
+                {
+                    "name": "Compétences",
+                    "link": "/contact",
+                    "icon": "broo"
+                },
+                {
+                    "name": "Contact",
+                    "link": "/contact",
+                    "icon": "send"
+                }
+            ]
+}

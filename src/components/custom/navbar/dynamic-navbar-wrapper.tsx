@@ -84,7 +84,7 @@ const DynamicNavbarWrapper = () => {
           transition: "border-radius 0.5s ease",
         }}
       >
-        <NavbarDefault />
+        <NavbarDefault isScrolled={isScrolled} />
       </GlowWrapper>
     </div>
   );

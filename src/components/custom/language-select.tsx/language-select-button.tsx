@@ -9,7 +9,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ChevronDown } from "lucide-react";
-import { useEffect } from "react";
 
 const LanguageSelectButton = () => {
   const { language, setLanguage } = useLanguage();
