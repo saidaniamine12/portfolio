@@ -2,7 +2,7 @@ import styles from "@/app/page/about/about.module.css";
 import { Code, CodeXml } from "lucide-react";
 const About = () => {
   return (
-    <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl   max-h-[80vh]">
+    <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl ">
       <div className="flex flex-col gap-4 p-4">
         {/* hello */}
         <div className="flex flex-row gap-2 text-3xl">
