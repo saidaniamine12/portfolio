@@ -1,0 +1,35 @@
+{
+    "EN" : [
+        {
+        "companyName": "Company Name",
+        "position": "Position",
+        "companyLogo": "logo-ipeiem.jpg",
+        "date": {
+            "start": "Start Date",
+            "end": "End Date"
+        },
+        "description": [
+             "Description Line 1",
+            "Description Line 2",
+            "Description Line 3"
+       
+        ]
+    }
+],
+    "FR" : [
+        {
+        "companyName": "Nom de l'entreprise",
+        "companyLogo": "logo-ipeiem.jpg",
+        "position": "Position",
+        "date": {
+            "start": "Date de début",
+            "end": "Date de fin"
+        },
+        "description": [
+            "Description Ligne 1",
+            "Description Ligne 2",
+            "Description Ligne 3"
+        ]
+    }
+    ]
+}

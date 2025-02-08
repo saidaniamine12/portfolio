@@ -9,6 +9,7 @@ import { Cog, Send } from "lucide-react";
 import { GraduationCap } from "lucide-react";
 import { BriefcaseBusiness } from "lucide-react";
 import { Pickaxe } from "lucide-react";
+import { useCurrentSection } from "@/app/page/section-provider";
 
 interface NavbarDefaultProps {
   isScrolled: boolean;
@@ -19,11 +20,18 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
 }: NavbarDefaultProps) => {
   const { language } = useLanguage();
   const { isMobile } = useSidebar();
+  const currentSection = useCurrentSection();
 
-  const navList = (
+  const NavList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navListEnFr[language].map((navItem, index) => (
-        <li key={index}>
+        <li
+          key={index}
+          className={`${
+            currentSection === navItem.id &&
+            "border-b border-spfg duration-300 ease-in-out"
+          }`}
+        >
           <Typography
             as="li"
             variant="small"
@@ -96,7 +104,7 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
             Mohamed Amine Saidani
           </span>
         </Typography>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:block">{NavList}</div>
         <div className="flex items-center gap-x-6 pr-4">
           <LanguageSelectButton />
           {/*  dark mode button */}

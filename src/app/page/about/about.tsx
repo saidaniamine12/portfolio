@@ -2,8 +2,11 @@ import styles from "@/app/page/about/about.module.css";
 import { Code, CodeXml } from "lucide-react";
 const About = () => {
   return (
-    <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl ">
-      <div className="flex flex-col gap-4 p-4">
+    <div
+      id="about"
+      className="flex grid auto-rows-min gap-4 md:grid-cols-2 bg-muted/50 rounded-xl tracked-section"
+    >
+      <div className="flex flex-col gap-10 p-4">
         {/* hello */}
         <div className="flex flex-row gap-2 text-3xl">
           <h2 className="font-semibold tracking-tight">Hello</h2>
@@ -13,22 +16,16 @@ const About = () => {
         <div className="flex flex-col gap-2 text-3xl items-start">
           <h2 className=" whitespace-nowrap ">
             I'm an{" "}
-            <span
-              style={{ color: "#00b4d8" }}
-              className="font-semibold tracking-tight"
-            >
+            <span className="font-semibold tracking-tight text-spfg">
               ICT Engineer
             </span>{" "}
             specialized in
           </h2>
-          <span
-            style={{ color: "#00b4d8" }}
-            className="font-semibold tracking-tight"
-          >
+          <span className="font-semibold tracking-tight text-spfg">
             Web Development
           </span>
         </div>
-        {/* hello */}
+        {/* Paragraph */}
         <div className="flex flex-col gap-2 text-left">
           <span className="">
             I’m a solution-driven web developer and software enthusiast who
@@ -49,6 +46,7 @@ const About = () => {
           </blockquote>
         </div>
       </div>
+      {/* Image */}
       <div className="flex justify-center items-center">
         <div className={`${styles["card"]} rotate-[-10deg]  overflow-hidden `}>
           <img

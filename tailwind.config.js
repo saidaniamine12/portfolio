@@ -13,6 +13,7 @@ export default {
 		
   		colors: {
   			background: 'hsl(var(--background))',
+			spfg: 'hsl(var(--special-foreground))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',

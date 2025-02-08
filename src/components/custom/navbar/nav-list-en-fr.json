@@ -2,26 +2,31 @@
     "EN": [
             {
                 "name": "Education",
+                "id" : "education",
                 "link": "/about",
                 "icon": "graduation-cap"
             },
             {
                 "name": "Experience",
+                "id" : "experience",
                 "link": "/contact",
                 "icon": "briefcase-business"
             },
             {
                 "name": "Projects",
+                "id" : "projects",
                 "link": "/projects",
                 "icon": "pickaxe"
             },
             {
                 "name": "Skills",
+                "id" : "skills",
                 "link": "/contact",
                 "icon": "broo"
             },
             {
                 "name": "Contact",
+                "id" : "contact",
                 "link": "/contact",
                 "icon": "send"
             }
@@ -29,26 +34,31 @@
     "FR": [
                 {
                     "name": "Éducation",
+                    "id" : "education",
                     "link": "/about",
                     "icon": "graduation-cap"
                 },
                 {
                     "name": "Expérience",
+                    "id" : "experience",
                     "link": "/contact",
                     "icon": "briefcase-business"
                 },
                 {
                     "name": "Projets",
+                    "id" : "projects",
                     "link": "/projects",
                     "icon": "pickaxe"
                 },
                 {
                     "name": "Compétences",
+                    "id" : "skills",
                     "link": "/contact",
                     "icon": "broo"
                 },
                 {
                     "name": "Contact",
+                    "id" : "contact",
                     "link": "/contact",
                     "icon": "send"
                 }
