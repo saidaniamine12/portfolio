@@ -1,0 +1,30 @@
+.wave {
+    animation: wave-animation 2.5s infinite linear;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+}
+  
+@keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) } 
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+}
+  
+
+.card {
+  max-width: 10rem;
+  max-height: 10rem;
+  aspect-ratio: 1/1;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 1px 12px 25px rgb(0 0 0 / 78%);
+  border-radius: 20px;
+
+}
