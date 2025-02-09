@@ -1,16 +1,13 @@
 
 
 .omnitrix {
-  margin-top: 100px;
-  position: relative;
+  top: 100px; /* You can adjust this as necessary */
+  left: 50%;
   width: 240px;
   height: 240px;
-  align-self: center;
-  justify-self: center;
 }
 
 .outer-border {
-  position: relative;
   display: flex;
   border: solid 3px #040404;
   width: 100%;

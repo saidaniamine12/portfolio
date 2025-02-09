@@ -1,7 +1,7 @@
 import Omnitrix from "./omnitrix";
 const Skills = () => {
   return (
-    <div id="skills" className="flex ml-5 w-full  tracked-section">
+    <div id="skills" className="flex w-full  tracked-section">
       <div className="flex">
         <Omnitrix />
       </div>

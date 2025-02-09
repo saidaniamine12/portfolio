@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./omnitrix.module.css";
 import { useCurrentSection } from "../section-provider";
+import { Redo, Undo } from "lucide-react";
 
 const Omnitrix = () => {
   const [currentRotation, setCurrentRotation] = useState(0);
@@ -64,8 +65,8 @@ const Omnitrix = () => {
     resetElements();
   }, []);
 
-  const handleRotateClick = () => {
-    const newRotation = currentRotation - 90;
+  const handleRotateClick = (angle: number) => {
+    const newRotation = currentRotation - angle;
     setCurrentRotation(newRotation);
 
     setTransforms((prev) => ({
@@ -183,9 +184,19 @@ const Omnitrix = () => {
         </div>
       </div>
 
-      <div className="flex flex-row gap-10 mt-10 w-100">
-        <button onClick={handleRotateClick}>Rotate 90°</button>
-        <button onClick={handleOpenClick}>Open</button>
+      <div className="flex flex-row gap-10 mt-10 w-full justify-evenly">
+        <button
+          className="rotate-[.6turn] text-spfg"
+          onClick={() => handleRotateClick(+90)}
+        >
+          <Redo />
+        </button>
+        <button
+          className="rotate-[.3turn] text-spfg"
+          onClick={() => handleRotateClick(-90)}
+        >
+          <Undo />
+        </button>
       </div>
     </div>
   );
