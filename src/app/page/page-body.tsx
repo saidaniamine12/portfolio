@@ -2,6 +2,7 @@ import { useSidebar } from "@/components/ui/sidebar";
 import Education from "./education/education";
 import Experience from "./experience/experience";
 import About from "./about/about";
+import Skills from "./skills/skills";
 
 const PageBody = () => {
   const { open } = useSidebar();
@@ -18,6 +19,7 @@ const PageBody = () => {
         <div className="w-full border-t"></div>
         <Experience />
         <div className="w-full border-t"></div>
+        <Skills />
         <div className="grid auto-rows-min gap-4 md:grid-cols-3">
           <div className="aspect-video rounded-xl bg-muted/50" />
           <div className="aspect-video rounded-xl bg-muted/50" />

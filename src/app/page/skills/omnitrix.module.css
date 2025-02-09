@@ -1,55 +1,4 @@
-#root {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 0; 
-  text-align: center;
-  @media (min-width: 768px) {
-    padding-top: 2em;
-  }
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-
-svg.lucide.lucide-align-justify.align-justify-icon  {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-}
 
 .omnitrix {
   margin-top: 100px;
@@ -76,8 +25,8 @@ svg.lucide.lucide-align-justify.align-justify-icon  {
   filter: blur(24px);
   background: #75dc00;
   border-radius: 50%;
-  height: 110%;
-  width: 110%;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-self: center;
   justify-self: center;
@@ -370,4 +319,3 @@ svg.lucide.lucide-align-justify.align-justify-icon  {
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 1px black);
 }
-
