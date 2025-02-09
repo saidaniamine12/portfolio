@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "./omnitrix.module.css";
-import { useCurrentSection } from "../section-provider";
+import { useCurrentSection } from "../../section-provider";
 import { Redo, Undo } from "lucide-react";
+import CarouselOmnitrix from "./carousel-omnitrix";
+import { useOpenedSkillId } from "../opened-skill-provider";
 
 const Omnitrix = () => {
   const [currentRotation, setCurrentRotation] = useState(0);
   const currentSection = useCurrentSection();
   const [isOmniOpen, setIsOmniOpen] = useState(false);
+  const { openedSkillId, setOpenedSkillId } = useOpenedSkillId();
   const [transforms, setTransforms] = useState({
     greenCircle: {
       transform: "translate(-50%, -50%) rotate(0deg)",
@@ -82,6 +85,20 @@ const Omnitrix = () => {
         transition: "transform 0.5s ease-in-out",
       },
     }));
+    // handle changing the current slide
+    if (angle === 90) {
+      if (openedSkillId >= 4) {
+        setOpenedSkillId(1);
+      } else {
+        setOpenedSkillId(openedSkillId + 1);
+      }
+    } else if (angle === -90) {
+      if (openedSkillId <= 1) {
+        setOpenedSkillId(4);
+      } else {
+        setOpenedSkillId(openedSkillId - 1);
+      }
+    }
 
     setTimeout(() => {
       setTransforms((prev) => ({
@@ -144,6 +161,7 @@ const Omnitrix = () => {
               className={styles["green-circle"]}
               style={transforms.greenCircle}
             >
+              {isOmniOpen && <CarouselOmnitrix isOmniOpen={isOmniOpen} />}
               <div
                 className={styles["left-side"]}
                 style={transforms.left}
