@@ -27,7 +27,7 @@ export const CurrentSectionProvider = ({
         });
       },
       {
-        threshold: 0.9, // Trigger when 90% of the section is in view
+        threshold: 0.5, // Trigger when 90% of the section is in view
       }
     );
 

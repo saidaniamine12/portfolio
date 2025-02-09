@@ -8,7 +8,7 @@ const About = () => {
     >
       <div className="flex flex-col gap-10 p-4">
         {/* hello */}
-        <div className="flex flex-row gap-2 text-3xl">
+        <div className="flex flex-row gap-2 text-3xl ">
           <h2 className="font-semibold tracking-tight">Hello</h2>
           <span className={styles["wave"]}>👋</span>
         </div>
@@ -26,7 +26,7 @@ const About = () => {
           </span>
         </div>
         {/* Paragraph */}
-        <div className="flex flex-col gap-2 text-left">
+        <div className="flex flex-col gap-2 text-left ">
           <span className="">
             I’m a solution-driven web developer and software enthusiast who
             thrives on tackling complex challenges through innovative code and

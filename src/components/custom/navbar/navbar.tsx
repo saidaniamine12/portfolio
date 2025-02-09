@@ -10,6 +10,7 @@ import { GraduationCap } from "lucide-react";
 import { BriefcaseBusiness } from "lucide-react";
 import { Pickaxe } from "lucide-react";
 import { useCurrentSection } from "@/app/page/section-provider";
+import { useEffect } from "react";
 
 interface NavbarDefaultProps {
   isScrolled: boolean;
@@ -22,14 +23,18 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
   const { isMobile } = useSidebar();
   const currentSection = useCurrentSection();
 
+  useEffect(() => {
+    console.log("currentSection", currentSection);
+  }, [currentSection]);
   const NavList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navListEnFr[language].map((navItem, index) => (
         <li
           key={index}
-          className={`${
-            currentSection === navItem.id &&
-            "border-b border-spfg duration-300 ease-in-out"
+          className={`transition-all duration-700 ease-in-out ${
+            currentSection === navItem.id
+              ? "border-b border-spfg"
+              : "border-b border-transparent"
           }`}
         >
           <Typography

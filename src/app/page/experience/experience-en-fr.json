@@ -13,9 +13,22 @@
             "Description Line 2",
             "Description Line 3"
        
-        ]
-    }
-],
+        ]},
+        {
+        "companyName": "Company Name",
+        "position": "Position",
+        "companyLogo": "logo-ipeiem.jpg",
+        "date": {
+            "start": "Start Date",
+            "end": "End Date"
+        },
+        "description": [
+             "Description Line 1",
+            "Description Line 2",
+            "Description Line 3"
+       
+        ]}
+    ],
     "FR" : [
         {
         "companyName": "Nom de l'entreprise",
