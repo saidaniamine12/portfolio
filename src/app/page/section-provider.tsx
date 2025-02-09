@@ -1,48 +1,52 @@
-// CurrentSectionContext.js
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { ReactNode } from "react";
 
-// Create a context to store the current section
 const CurrentSectionContext = createContext("");
 
-// Custom hook to access the current section
 export const useCurrentSection = () => useContext(CurrentSectionContext);
-
-// Provider component
-import { ReactNode } from "react";
 
 export const CurrentSectionProvider = ({
   children,
 }: {
   children: ReactNode;
 }) => {
-  const [currentSection, setCurrentSection] = useState<string | null>(null);
+  const [currentSection, setCurrentSection] = useState<string>("");
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.5, // Trigger when 90% of the section is in view
-      }
-    );
+    let observer: IntersectionObserver | null = null;
 
-    const sections = document.querySelectorAll(".tracked-section"); // All sections with the class "section"
-    sections.forEach((section) => {
-      observer.observe(section);
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      // Get all entries that are currently intersecting
+      const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+
+      if (visibleEntries.length > 0) {
+        // Find the entry with the highest intersection ratio
+        const mostVisible = visibleEntries.reduce((prev, current) =>
+          current.intersectionRatio > prev.intersectionRatio ? current : prev
+        );
+
+        setCurrentSection(mostVisible.target.id);
+      }
+    };
+
+    observer = new IntersectionObserver(handleIntersection, {
+      threshold: [0.2, 0.6, 0.8],
+      rootMargin: "-10% 0px",
     });
 
+    // Observe all sections
+    const sections = document.querySelectorAll(".tracked-section");
+    sections.forEach((section) => observer.observe(section));
+
     return () => {
-      sections.forEach((section) => observer.unobserve(section)); // Cleanup observer
+      if (observer) {
+        observer.disconnect();
+      }
     };
   }, []);
 
   return (
-    <CurrentSectionContext.Provider value={currentSection || ""}>
+    <CurrentSectionContext.Provider value={currentSection}>
       {children}
     </CurrentSectionContext.Provider>
   );

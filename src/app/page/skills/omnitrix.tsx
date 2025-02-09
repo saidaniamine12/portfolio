@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./omnitrix.module.css";
+import { useCurrentSection } from "../section-provider";
 
 const Omnitrix = () => {
   const [currentRotation, setCurrentRotation] = useState(0);
+  const currentSection = useCurrentSection();
+  const [isOmniOpen, setIsOmniOpen] = useState(false);
   const [transforms, setTransforms] = useState({
     greenCircle: {
       transform: "translate(-50%, -50%) rotate(0deg)",
@@ -116,11 +119,19 @@ const Omnitrix = () => {
         height: "120%",
       },
     }));
-
-    setTimeout(() => {
-      resetElements();
-    }, 2000);
   };
+
+  useEffect(() => {
+    if (currentSection === "skills" && !isOmniOpen) {
+      handleOpenClick();
+      setIsOmniOpen(true);
+    } else {
+      if (isOmniOpen && currentSection !== "skills") {
+        resetElements();
+        setIsOmniOpen(false);
+      }
+    }
+  }, [currentSection]);
 
   return (
     <div className="flex flex-col">
