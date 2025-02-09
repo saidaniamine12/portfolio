@@ -30,8 +30,8 @@ export const CurrentSectionProvider = ({
     };
 
     observer = new IntersectionObserver(handleIntersection, {
-      threshold: [0.2, 0.6, 0.8],
-      rootMargin: "-10% 0px",
+      threshold: [0.6],
+      rootMargin: "0px 0px",
     });
 
     // Observe all sections
