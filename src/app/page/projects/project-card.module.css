@@ -1,0 +1,17 @@
+/* styles.css */
+@keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateY(-25%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .jump {
+    animation: move 1.5s infinite;
+  }
+  

@@ -3,12 +3,15 @@ import styled from "styled-components";
 import "@/App.css";
 import { ReactNode } from "react";
 
-const GlowWrapper = ({
-  children,
-  style,
-}: {
+interface GlowWrapperProps {
   children: ReactNode;
   style: React.CSSProperties;
+  className?: string;
+}
+const GlowWrapper: React.FC<GlowWrapperProps> = ({
+  children,
+  style,
+  className,
 }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const baseColor = [255, 220, 139];
@@ -67,6 +70,7 @@ const GlowWrapper = ({
 
   return (
     <GlowContainer
+      className={className}
       ref={wrapperRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

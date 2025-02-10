@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "EN": {
+                "title": "Snake Game",
+                "description": [
+                    "Project built with React and a borderless board where the snake wraps around from side to side.",
+                    "the speed increases dynamically with length, adding challenge as the game progresses",
+                    "Endless gameplay with no borders, creating a continuous and challenging experience."
+
+                ]
+            },
+            "FR": {
+                "title": "Jeu de Serpent",
+                "description": [
+                    "Jeu de Snake créé avec React, avec un plateau sans bordures où le serpent se déplace d'un côté à l'autre.",
+                    "La vitesse du serpent augmente dynamiquement en fonction de sa longueur, rendant le jeu de plus en plus difficile.",
+                    "Jeu sans fin avec une difficulté croissante et aucun bord pour limiter le mouvement."
+                ]
+            },
+            "projectLink": "https://saidaniamine12.github.io/snake-game/",
+            "githubLink": "https://github.com/saidaniamine12/snake-game" ,
+            "projectImgLink": "snake-game.png",
+            "stack": [
+                {
+                    "name": "React",
+                    "imgPath": "react.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "imgPath": "typescript.png"
+                },
+                {
+                    "name": "HTML",
+                    "imgPath": "html.png"
+                },
+                {
+                    "name": "CSS",
+                    "imgPath": "css-3.png"
+                }
+            ]
+        }
+    ]
+}
