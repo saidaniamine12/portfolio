@@ -56,7 +56,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: rotate 10s linear infinite;
+
 }
 
 .left-side {
@@ -315,4 +315,23 @@
   background-size: 50.5% 50.5%;
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 1px black);
+}
+
+
+@keyframes rotateGreenCircle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateOuterBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
