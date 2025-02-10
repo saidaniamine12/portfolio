@@ -228,7 +228,7 @@ const Omnitrix = () => {
               className={styles["green-circle"]}
               style={transforms.greenCircle as React.CSSProperties}
             >
-              {isOmniOpen && <CarouselOmnitrix isOmniOpen={isOmniOpen} />}
+              {isOmniOpen && <CarouselOmnitrix />}
               <div
                 className={styles["left-side"]}
                 style={transforms.left as React.CSSProperties}
