@@ -5,7 +5,10 @@ import projectsData from "./projects-data-en-fr.json";
 const Projects = () => {
   const { language } = useLanguage();
   return (
-    <div className="flex flex-col w-full p-x-4 gap-8">
+    <div
+      id="projects"
+      className="flex flex-col w-full p-x-4 gap-8 tracked-section"
+    >
       <span className=" flex text-start  text-3xl">
         {language === "EN" ? "Projects" : "Projet"}
       </span>

@@ -272,9 +272,9 @@ const Omnitrix = () => {
         </div>
       </div>
 
-      <div className="flex flex-row gap-10 mt-10 w-full justify-evenly">
+      <div className="flex flex-row gap-16 mt-10 w-full justify-evenly">
         <button
-          className="rotate-[.6turn] text-spfg"
+          className="rotate-[.7turn] text-spfg"
           onClick={() => handleRotateClick(+90)}
         >
           <Redo />

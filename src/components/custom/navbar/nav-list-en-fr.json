@@ -13,17 +13,18 @@
                 "icon": "briefcase-business"
             },
             {
-                "name": "Projects",
-                "id" : "projects",
-                "link": "/projects",
-                "icon": "pickaxe"
-            },
-            {
                 "name": "Skills",
                 "id" : "skills",
                 "link": "/contact",
                 "icon": "broo"
             },
+            {
+                "name": "Projects",
+                "id" : "projects",
+                "link": "/projects",
+                "icon": "pickaxe"
+            },
+           
             {
                 "name": "Contact",
                 "id" : "contact",
@@ -45,16 +46,16 @@
                     "icon": "briefcase-business"
                 },
                 {
-                    "name": "Projets",
-                    "id" : "projects",
-                    "link": "/projects",
-                    "icon": "pickaxe"
-                },
-                {
                     "name": "Compétences",
                     "id" : "skills",
                     "link": "/contact",
                     "icon": "broo"
+                },
+                {
+                    "name": "Projets",
+                    "id" : "projects",
+                    "link": "/projects",
+                    "icon": "pickaxe"
                 },
                 {
                     "name": "Contact",
