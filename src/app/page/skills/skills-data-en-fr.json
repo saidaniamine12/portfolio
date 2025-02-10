@@ -1,0 +1,165 @@
+{
+ "data": [
+        {
+            "id": 1,
+            
+            "title": {
+                "EN": "Skills",
+                "FR": "Compétences"
+            },
+            "skills": [
+                {
+                    "name": "Python",
+                    "imgPath": "python.png"
+                },
+                {
+                    "name": "Java",
+                    "imgPath": "java.png"
+                },
+                {
+                    "name": "HTML",
+                    "imgPath": "html.png"
+                },
+                {
+                    "name": "CSS",
+                    "imgPath": "css-3.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "imgPath": "js.png"
+                },
+                {
+                    "name": "TypeScript",
+                    "imgPath": "typescript.png"
+                },
+               
+                {
+                    "name": "SQL",
+                    "imgPath": "database.png"
+                },
+                {
+                    "name": "GraphQL",
+                    "imgPath": "graphql.png"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": {
+                "EN": "Backend",
+                "FR": "Backend"
+            },
+            "skills": [
+                {
+                    "name": "Spring Boot",
+                    "imgPath": "spring-boot.png"
+                },
+                {
+                    "name": "Nest.js",
+                    "imgPath": "nestjs.svg"
+                },
+                {
+                    "name": "Next.js",
+                    "imgPath": "nextjs.png"
+                },
+                {
+                    "name": "MySQL",
+                    "imgPath": "mysql.png"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "imgPath": "postgresql.png"
+                },
+                {
+                    "name": "MongoDB",
+                    "imgPath": "mongodb.png"
+                },
+                {
+                    "name": "ElasticStack",
+                    "imgPath": "elasticstack.svg"
+                },{
+                    "name": "Kafka",
+                    "imgPath": "kafka.png"
+                }
+
+
+            ]
+        }, 
+        {
+            "id": 3,
+            "title": {
+                "EN": "Frontend",
+                "FR": "Frontend"
+            },
+            "skills": [
+                {
+                    "name": "React",
+                    "imgPath": "react.png"
+                },
+                {
+                    "name": "Angular",
+                    "imgPath": "angular.png"
+                },
+                {
+                    "name": "Bootstrap",
+                    "imgPath": "bootstrap.png"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "imgPath": "tailwindcss.png"
+                }
+            ]
+        },{
+            "id": 4,
+            "title": {
+                "EN": "Tools & DevOps",
+                "FR": "Outils & DevOps"
+            },
+            "skills": [
+                {
+                    "name": "Docker",
+                    "imgPath": "docker.png"
+                },
+                {
+                    "name": "Kubernetes",
+                    "imgPath": "kubernetes.png"
+                },
+                {
+                    "name": "OpenShift",
+                    "imgPath": "openshift.svg"
+                },
+                {
+                    "name": "Git",
+                    "imgPath": "git.png"
+                },
+                {
+                    "name": "GitHub",
+                    "imgPath": "github.png"
+                },
+                {
+                    "name": "GitLab",
+                    "imgPath": "gitlab.png"
+                },
+                    
+                {
+                    "name": "Postman",
+                    "imgPath": "postman.png"
+                },
+                {
+                    "name": "Prometheus",
+                    "imgPath": "prometheus.png"
+                },
+                {
+                    "name": "Grafana",
+                    "imgPath": "grafana.jpg"
+                }
+            ]
+        
+        }
+        
+  
+    ]
+    
+       
+
+}
