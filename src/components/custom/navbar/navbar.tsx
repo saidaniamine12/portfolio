@@ -110,7 +110,7 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
           </span>
         </Typography>
         <div className="hidden lg:block">{NavList}</div>
-        <div className="flex items-center gap-x-6 pr-4">
+        <div className="flex items-center gap-x-6 pr-4 ">
           <LanguageSelectButton />
           {/*  dark mode button */}
           <DarkModeToggle />
