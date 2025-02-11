@@ -5,6 +5,7 @@ import About from "./about/about";
 import Skills from "./skills/skills";
 import { OpenedSkillIdProvider } from "./skills/opened-skill-provider";
 import Projects from "./projects/projects";
+import Contact from "./contact/contact";
 
 const PageBody = () => {
   const { open } = useSidebar();
@@ -27,6 +28,7 @@ const PageBody = () => {
         <div className="w-full border-t"></div>
         <Projects />
         <div className="w-full border-t"></div>
+        <Contact />
         <div className="grid auto-rows-min gap-4 md:grid-cols-3">
           <div className="aspect-video rounded-xl bg-muted/50" />
           <div className="aspect-video rounded-xl bg-muted/50" />
