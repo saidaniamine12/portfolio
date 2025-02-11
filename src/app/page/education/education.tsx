@@ -37,7 +37,7 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="flex flex-col gap-2 text-left tracked-section"
+      className="flex flex-col gap-2 text-left tracked-section px-4"
     >
       <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl ">
         <InstituteCard

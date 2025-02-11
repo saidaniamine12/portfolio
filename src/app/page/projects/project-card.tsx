@@ -122,7 +122,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
             : project.FR.description.map((desc, index) => (
                 <div
                   key={index}
-                  className="mb-4 grid grid-cols-[25px_1fr] items-start pb-2 last:mb-0 last:pb-0"
+                  className="mb-4 grid grid-cols-[25px_1fr] items-start last:mb-0 last:pb-0"
                 >
                   <span className="flex h-2 w-2 translate-y-1 rounded-full bg-spfg" />
                   <div className=" text-start">

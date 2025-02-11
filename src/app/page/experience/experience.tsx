@@ -6,10 +6,10 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="flex flex-col w-full gap-14 tracked-section"
+      className="flex flex-col w-full gap-14 tracked-section px-4"
     >
       {experienceData[language].map((experience, index) => (
-        <div key={index} className={`flex flex-col w-full  gap-10`}>
+        <div key={index} className={`flex flex-col w-full  gap-10 `}>
           <div className="flex flex-row gap-4 w-full  border-l">
             {/* date + company logo */}
             <div className="flex flex-col w-1/4 gap-4">

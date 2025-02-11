@@ -10,6 +10,7 @@ import useEmailSendMutation from "./send-email.hook";
 import styles from "./loader.module.css";
 import { useEffect } from "react";
 import { toast } from "@/hooks/use-toast";
+import { useLanguage } from "@/components/custom/language-select.tsx/language-select-provider";
 
 const EmailFormSchema = Joi.object({
   email: Joi.string()
@@ -36,6 +37,7 @@ const EmailFormSchema = Joi.object({
 
 const EmailForm = () => {
   const { mutate, loading, error, data } = useEmailSendMutation();
+  const { language } = useLanguage();
   const { register, handleSubmit, reset } = useForm<EmailFormData>({
     mode: "onSubmit",
     resolver: joiResolver(EmailFormSchema),
@@ -68,26 +70,30 @@ const EmailForm = () => {
     >
       <Input
         type="text"
-        placeholder="Name"
+        placeholder={language === "EN" ? "Name" : "Nom"}
         className="border-b-2 border-gray-400 p-2 mb-4"
         {...register("name")}
+        disabled={loading}
       />
       <Input
         type="email"
         placeholder="Email"
         className="border-b-2 border-gray-400 p-2 mb-4"
         {...register("email")}
+        disabled={loading}
       />
       <Input
         type="subject"
-        placeholder="Subject"
+        placeholder={language === "EN" ? "Subject" : "Sujet"}
         className="border-b-2 border-gray-400 p-2 mb-4"
         {...register("subject")}
+        disabled={loading}
       />
       <Textarea
         placeholder="Message"
         className="border-b-2 border-gray-400 p-2 mb-4"
         {...register("message")}
+        disabled={loading}
       />
       <Button
         type="submit"
@@ -95,7 +101,13 @@ const EmailForm = () => {
         className=" rounded-md self-center w-20"
         disabled={loading}
       >
-        {loading ? <div className={styles["loader"]}></div> : "Send"}
+        {loading ? (
+          <div className={styles["loader"]}></div>
+        ) : language === "EN" ? (
+          "Send"
+        ) : (
+          "Envoyer"
+        )}
       </Button>
     </form>
   );

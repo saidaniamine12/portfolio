@@ -1,10 +1,14 @@
 import styles from "@/app/page/about/about.module.css";
+import { useTheme } from "@/components/theme-provider";
 import { Code, CodeXml } from "lucide-react";
 const About = () => {
+  const { theme } = useTheme();
   return (
     <div
       id="about"
-      className="flex grid auto-rows-min gap-4 md:grid-cols-2 bg-muted/50 rounded-xl tracked-section"
+      className={`flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl tracked-section px-4 ${
+        theme === "light" ? "bg-muted/50" : ""
+      }`}
     >
       <div className="flex flex-col gap-10 p-4">
         {/* hello */}
