@@ -75,7 +75,8 @@ div[placeholder^="Menu-List"] {
 div[placeholder^="Menu-List"] button {
   display: block;
   width: 100%;
-  padding-top: 8px;
+  padding-top: 10px;
+  padding-bottom:8px;
   border-radius: 6px;
   text-align: left;
   cursor: pointer;
@@ -86,24 +87,6 @@ div[placeholder^="Menu-List"] button:hover {
   color: hsl(var(--accent-foreground));
 }
 
-button[data-placeholder^="Select-language"]:hover {
-  background-color: transparent;
-  color: transparent;
-  border: none;
-}
-
-button[data-placeholder^="Select-language"]:focus {
-  background-color: transparent;
-  color: transparent;
-  outline: none;
-  border: none;
-}
-
-button[data-placeholder^="Select-language"]:active {
-  background-color: transparent;
-  color: transparent;
-  border: none;
-}
 
 
 /* to stop the ring effect afer clicking*/

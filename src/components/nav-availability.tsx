@@ -14,9 +14,11 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import LiveGreen from "./custom/availability/availability";
+import { useLanguage } from "./custom/language-select.tsx/language-select-provider";
 
-export function NavMain() {
+export function NavAvailability() {
   const { open } = useSidebar();
+  const { language } = useLanguage();
   return (
     <SidebarGroup>
       <SidebarGroupLabel></SidebarGroupLabel>
@@ -37,10 +39,12 @@ export function NavMain() {
                   <LiveGreen />
                   <div className="pl-1 flex flex-col overflow-hidden">
                     <span className=" whitespace-nowrap ">
-                      Currently available
+                      {language === "EN" ? "Currently available" : "Disponible"}
                     </span>
                     <span className=" whitespace-nowrap  opacity-70 text-xs">
-                      Let’s Collaborate!
+                      {language === "EN"
+                        ? "Let’s Collaborate!"
+                        : "Travaillons ensemble!"}
                     </span>
                   </div>
                 </div>
