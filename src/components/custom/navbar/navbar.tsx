@@ -23,9 +23,7 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
   const { isMobile } = useSidebar();
   const currentSection = useCurrentSection();
 
-  useEffect(() => {
-    console.log("currentSection", currentSection);
-  }, [currentSection]);
+  useEffect(() => {}, [currentSection]);
   const NavList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navListEnFr[language].map((navItem, index) => (

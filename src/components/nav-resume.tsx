@@ -13,25 +13,23 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import mohamed_amine_saidani_resume from "../assets/Mohamed_amine_saidani_resume.pdf";
 import { toast } from "@/hooks/use-toast";
 import { useLanguage } from "./custom/language-select.tsx/language-select-provider";
 
 export function NavResume() {
   const { language } = useLanguage();
   const downloadPdfResume = () => {
-    const file = new Blob([mohamed_amine_saidani_resume], {
-      type: "application/pdf",
-    });
+    // Define the file path (ensure it's accessible from your app's public directory)
+    const fileUrl = "../assets/mohamed_amine_saidani_resume.pdf";
+
     const element = document.createElement("a");
-    element.href = URL.createObjectURL(file);
+    element.href = fileUrl;
     element.download =
       language === "EN"
         ? "mohamed_amine_saidani_resume.pdf"
         : "mohamed_amine_saidani_cv.pdf";
 
-    // simulate link click
-    document.body.appendChild(element); // Required for this to work in FireFox
+    document.body.appendChild(element);
     element.click();
   };
 

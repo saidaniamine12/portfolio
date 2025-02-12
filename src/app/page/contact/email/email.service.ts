@@ -2,7 +2,6 @@ import axios from 'axios';
 import { EmailFormData } from './email.interface';
 
 export const sendEmailService = async (emailData: EmailFormData) => {
-  console.log(emailData);
     const response = await axios.post('http://127.0.0.1:3000/send-email', emailData, {
       headers: {
         'Content-Type': 'application/json', 

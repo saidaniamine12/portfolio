@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styles from "./carousel-omnitrix.module.css";
 import { useOpenedSkillId } from "../opened-skill-provider";
 
@@ -8,12 +7,8 @@ const CarouselOmnitrix = () => {
   // Function to go directly to a specific slide via dots
   const currentSlide = (index: number) => {
     setOpenedSkillId(index);
-    console.log("index", index);
   };
 
-  useEffect(() => {
-    console.log("openedSkillId", openedSkillId);
-  }, [openedSkillId]);
   return (
     <div className={styles["slideshow-container"]}>
       <div

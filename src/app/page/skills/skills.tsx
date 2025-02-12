@@ -2,14 +2,10 @@ import { useLanguage } from "@/components/custom/language-select.tsx/language-se
 import Omnitrix from "./omnitrix/omnitrix";
 import { useOpenedSkillId } from "./opened-skill-provider";
 import skillsData from "./skills-data-en-fr.json";
-import { useEffect } from "react";
 const Skills = () => {
   const { language } = useLanguage();
   const { openedSkillId } = useOpenedSkillId();
 
-  useEffect(() => {
-    console.log("openedSkillId", openedSkillId);
-  }, [openedSkillId]);
   return (
     <div id="skills" className="flex w-full flex-row  tracked-section">
       <div className="flex flex-col w-2/5 items-center">

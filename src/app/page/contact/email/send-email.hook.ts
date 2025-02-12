@@ -13,7 +13,6 @@ const useEmailSendMutation = () => {
       setError(null);
       try {
         const response : Response = await sendEmailService(emailData);
-        console.log(response);
         if (response.status === 'success') {
           setData(response.data);
         } else if (response.status === 'error') {
@@ -22,8 +21,7 @@ const useEmailSendMutation = () => {
           setError('Something went wrong! Please try again later.' );
         }
       
-      } catch (err ) {
-        console.log(err);
+      } catch {
         setError('Something went wrong! Please try again later.');
       } finally {
         setLoading(false);
