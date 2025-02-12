@@ -20,7 +20,7 @@ const LanguageSelectButton = () => {
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
         >
-          <span className="pt-[2px] pl-1 font-medium"> {language}</span>
+          <span className="pt-[2px] pl-1 font-semibold"> {language}</span>
 
           <ChevronDown strokeWidth={1} />
         </Button>
