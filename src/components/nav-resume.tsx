@@ -1,7 +1,7 @@
 "use client";
 
 import { FileUser } from "lucide-react";
-
+import { saveAs } from "file-saver";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -18,19 +18,37 @@ import { useLanguage } from "./custom/language-select.tsx/language-select-provid
 
 export function NavResume() {
   const { language } = useLanguage();
-  const downloadPdfResume = () => {
-    // Define the file path (ensure it's accessible from your app's public directory)
-    const fileUrl = "../assets/mohamed_amine_saidani_resume.pdf";
+  const downloadPdfResume = async () => {
+    try {
+      // 1. Fetch the PDF file
+      const response = await fetch(
+        "http://localhost:5173/Mohamed_amine_saidani_CV.pdf"
+      );
 
-    const element = document.createElement("a");
-    element.href = fileUrl;
-    element.download =
-      language === "EN"
-        ? "mohamed_amine_saidani_resume.pdf"
-        : "mohamed_amine_saidani_cv.pdf";
-
-    document.body.appendChild(element);
-    element.click();
+      const pdfArrayBuffer = await response.arrayBuffer();
+      const pdfBlob = new Blob([pdfArrayBuffer], { type: "application/pdf" });
+      // 2. Convert response to Blob
+      saveAs(
+        pdfBlob,
+        language === "EN"
+          ? "Mohamed_amine_saidani_resume.pdf"
+          : "Mohamed_amine_saidani_CV.pdf"
+      );
+      const message =
+        language === "EN"
+          ? "Downloading has started."
+          : "Le téléchargement a commencé.";
+      toast({
+        description: message,
+        variant: "blur",
+      });
+    } catch {
+      toast({
+        description: "Failed to download resume. Please try again later.",
+        variant: "destructive",
+      });
+      // Add your error handling here (e.g., show error message to user)
+    }
   };
 
   return (
@@ -50,10 +68,6 @@ export function NavResume() {
               <div
                 onClick={() => {
                   downloadPdfResume();
-                  toast({
-                    description: "resume has been downloaded.",
-                    variant: "blur",
-                  });
                 }}
                 className="grid flex flex-row text-left text-sm leading-tight"
               >
