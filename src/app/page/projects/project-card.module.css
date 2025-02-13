@@ -15,3 +15,28 @@
     animation: move 1.5s infinite;
   }
   
+
+  .custom-scrollbar {
+    width: 94%; 
+
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    padding-right: 5px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 178, 214, 0.2);
+    border-radius: 20px;
+    border: transparent;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 178, 214, 0.5);
+  }
+  

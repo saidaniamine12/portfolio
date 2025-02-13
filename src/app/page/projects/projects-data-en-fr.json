@@ -1,22 +1,57 @@
 {
     "projects": [
         {
-            "EN": {
-                "title": "Snake Game",
-                "description": [
-                    "Project built with React and a borderless board where the snake wraps around from side to side.",
-                    "the speed increases dynamically with length, adding challenge as the game progresses",
-                    "Endless gameplay with no borders, creating a continuous and challenging experience."
-
-                ]
+                "title": "Job Scraper",
+                "description":{
+                    "EN": [
+                        "Job Scraper and Automator that scans job listing pages like LinkedIn, Tanit Jobs, and Emploi Tunisie, overcoming Cloudflare CAPTCHAs to gather potential job opportunities in Tunisia.",
+                        "Job Scoring that uses DeepSeek API to assess and score job listings based on relevance and quality.",
+                        "Instant Notifications that send real-time job alerts via Telegram, ensuring you never miss a relevant opportunity."
+    
+                    ],
+                    "FR": [
+                        "Scraper et Automator d'offres d'emploi qui scanne les pages de listing d'offres d'emploi comme LinkedIn, Tanit Jobs et Emploi Tunisie, surmontant les CAPTCHAs Cloudflare pour rassembler des opportunités d'emploi potentielles en Tunisie.",
+                        "Job Scoring qui utilise l'API DeepSeek pour évaluer et noter les offres d'emploi en fonction de leur pertinence et de leur qualité.",
+                        "Notifications instantanées qui envoient des alertes d'emploi en temps réel via Telegram, vous assurant de ne jamais manquer une opportunité pertinente."
+                    ]
             },
-            "FR": {
-                "title": "Jeu de Serpent",
-                "description": [
-                    "Jeu de Snake créé avec React, avec un plateau sans bordures où le serpent se déplace d'un côté à l'autre.",
-                    "La vitesse du serpent augmente dynamiquement en fonction de sa longueur, rendant le jeu de plus en plus difficile.",
-                    "Jeu sans fin avec une difficulté croissante et aucun bord pour limiter le mouvement."
-                ]
+            "projectLink": "",
+            "githubLink": "" ,
+            "projectImgLink": "job.png",
+            "stack": [
+                {
+                    "name": "Python",
+                    "imgPath": "python.png"
+                },
+                {
+                    "name": "Selenium",
+                    "imgPath": "selenium.png"
+                },
+                {
+                    "name": "DeepSeek",
+                    "imgPath": "deepseek.png"
+                },
+                {
+                    "name": "Telegram",
+                    "imgPath": "telegram.webp"
+                }
+            ]
+        },
+        {
+                "title": "Snake Game",
+                "description":{
+                    "EN": [
+                        "Project built with React and a borderless board where the snake wraps around from side to side.",
+                        "the speed increases dynamically with length, adding challenge as the game progresses",
+                        "Endless gameplay with no borders, creating a continuous and challenging experience."
+    
+                    ],
+                    "FR": [
+                        "Jeu de Snake créé avec React, avec un plateau sans bordures où le serpent se déplace d'un côté à l'autre.",
+                        "La vitesse du serpent augmente dynamiquement en fonction de sa longueur, rendant le jeu de plus en plus difficile.",
+                        "Jeu sans fin avec une difficulté croissante et aucun bord pour limiter le mouvement."
+                    ]
+
             },
             "projectLink": "https://saidaniamine12.github.io/snake-game/",
             "githubLink": "https://github.com/saidaniamine12/snake-game" ,
@@ -39,6 +74,48 @@
                     "imgPath": "css-3.png"
                 }
             ]
-        }
+        },
+        {
+            "title": "IOT Data Collector",
+            "description":{
+                "EN": [
+                    "Sensor data is collected using a Raspberry Pi and sent to a Kafka broker deployed on Azure, which acts as a middleware for reliable data streaming.",
+                    "The data was then passed from Kafka to MongoDB, where it was stored and could easily handle any large spikes in data.",
+                    "Used Grafana to visualize the data from MongoDB, creating real-time charts and dashboards to track everything as it happened."
+
+                ],
+                "FR": [
+                    "Les données des capteurs sont collectées à l'aide d'un Raspberry Pi et envoyées à un courtier Kafka, qui agit comme un intermédiaire pour le streaming de données fiable.",
+                    "Les données ont ensuite été transmises de Kafka à MongoDB, où elles ont été stockées et pouvaient facilement gérer tout pic important de données.",
+                    "j'ai Utilisé Grafana pour visualiser les données de MongoDB, créant des graphiques et des tableaux de bord en temps réel pour suivre tout ce qui se passait."
+                ]
+
+        },
+        "projectLink": "",
+        "githubLink": "" ,
+        "projectImgLink": "iot.png",
+        "stack": [
+            {
+                "name": "Raspberry Pi",
+                "imgPath": "raspberry-pi.png"
+            },
+            {
+                "name": "Kafka",
+                "imgPath": "kafka.png"
+            },
+            {
+                "name": "MongoDB",
+                "imgPath": "mongodb.png"
+            },
+            {
+                "name": "Grafana",
+                "imgPath": "grafana.jpg"
+            },
+            {
+                "name": "Azure",
+                "imgPath": "azure.png"
+            }
+        ]
+    }
     ]
 }

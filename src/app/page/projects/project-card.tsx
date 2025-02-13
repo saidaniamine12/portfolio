@@ -17,27 +17,25 @@ import { ExternalLink } from "lucide-react";
 import { useState } from "react";
 import styles from "./project-card.module.css";
 
-type projectStack = {
+interface projectStack {
   imgPath: string;
   name: string;
-};
-type ProjectCardProps = {
+}
+interface description {
+  EN: string[];
+  FR: string[];
+}
+interface ProjectCardProps {
   className?: string;
   project: {
-    EN: {
-      title: string;
-      description: string[];
-    };
-    FR: {
-      title: string;
-      description: string[];
-    };
+    title: string;
+    description: description;
     projectLink: string;
     githubLink: string;
     projectImgLink: string;
     stack: projectStack[];
   };
-};
+}
 
 const ProjectCard = ({ className, project }: ProjectCardProps) => {
   const [isCardHeaderHovered, setIsCardHeaderHovered] = useState(false);
@@ -49,11 +47,11 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
         transition: "all 0.3s ease-in-out",
       }}
       className={cn(
-        "w-[380px] hover:border-none  bg-transparent hover:rounded-none",
+        "w-[380px] hover:border-none  bg-transparent hover:rounded-none h-full ",
         className
       )}
     >
-      <CardHeader>
+      <CardHeader className="flex pb-4">
         <div
           onMouseEnter={() => {
             setIsCardHeaderHovered(true);
@@ -90,50 +88,40 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
             </div>
           )}
         </div>
-        <CardTitle className={`text-start text-base pt-2`}>
+        <CardTitle className={`text-start text-base pt-1`}>
           <span
             onClick={() => {
               window.open(project.projectLink, "_blank", "noopener,noreferrer");
             }}
             className={`  ${
               project.projectLink.trim().length > 0
-                ? "cursor-pointer hover:border-b border-spfg pb-1"
+                ? "cursor-pointer hover:border-b border-spfg"
                 : ""
             }`}
           >
-            {language === "EN" ? project.EN.title : project.FR.title}
+            {project.title}
           </span>
         </CardTitle>
       </CardHeader>
-      <CardContent className="grid gap-4">
+      <CardContent
+        className={`grid gap-4 h-[180px] overflow-y-auto ${styles["custom-scrollbar"]}`}
+      >
         <div>
-          {language === "EN"
-            ? project.EN.description.map((desc, index) => (
-                <div
-                  key={index}
-                  className=" grid grid-cols-[25px_1fr] items-start pb-1 last:mb-0 last:pb-0"
-                >
-                  <span className="flex h-2 w-2 translate-y-1 rounded-full bg-spfg" />
-                  <div className="text-start">
-                    <p className="text-[0.8rem] leading-0 ">{desc}</p>
-                  </div>
-                </div>
-              ))
-            : project.FR.description.map((desc, index) => (
-                <div
-                  key={index}
-                  className="mb-4 grid grid-cols-[25px_1fr] items-start last:mb-0 last:pb-0"
-                >
-                  <span className="flex h-2 w-2 translate-y-1 rounded-full bg-spfg" />
-                  <div className=" text-start">
-                    <p className="text-xs font-medium leading-none ">{desc}</p>
-                  </div>
-                </div>
-              ))}
+          {project.description[language].map((desc, index) => (
+            <div
+              key={index}
+              className=" grid grid-cols-[25px_1fr] items-start pb-1 last:mb-0 last:pb-0"
+            >
+              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-spfg" />
+              <div className="text-start">
+                <p className="text-[0.8rem] leading-0 ">{desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </CardContent>
-      <CardFooter>
-        <div className="w-full flex flex-col gap-4">
+      <CardFooter className="flex mt-2">
+        <div className="w-full flex flex-col gap-4 ">
           <div className="flex flex-row gap-2">
             {project.stack.map((tech, index) => {
               return (
@@ -159,6 +147,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
           <Button
             className="flex flex-row "
             variant="outline"
+            disabled={project.githubLink.trim().length === 0}
             onClick={() => {
               window.open(project.githubLink, "_blank", "noopener,noreferrer");
             }}
