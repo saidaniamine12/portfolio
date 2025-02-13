@@ -29,8 +29,8 @@ const InstituteCard: React.FC<InstituteCardProps> = ({
         className="rounded max-w-40 max-h-40 aspect-square"
       ></img>
       <div className="flex flex-col pl-4 pt-2 text-left">
-        <span className=" whitespace-nowrap text-spfg">{degree}</span>
-        <span className=" whitespace-nowrap ">{name}</span>
+        <span className="flex text-spfg">{degree}</span>
+        <span className="flex ">{name}</span>
       </div>
     </div>
   );

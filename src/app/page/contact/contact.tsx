@@ -8,11 +8,22 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col w-full items-center justify-center px-4 tracked-section"
+      className="flex flex-col w-full items-center justify-center px-4 tracked-section gap-4"
     >
       <h1 className="flex text-3xl self-start">
         {language === "EN" ? "Contact" : "Contact"}
       </h1>
+      <span className="flex text-3xl self-start">
+        {language === "EN" ? (
+          <span>
+            {" "}
+            Get in touch and let's{" "}
+            <span className="text-spfg"> work together</span>
+          </span>
+        ) : (
+          <span>travaillons ensemble</span>
+        )}
+      </span>
 
       <div
         className={`flex self-center w-3/5 flex-col ${

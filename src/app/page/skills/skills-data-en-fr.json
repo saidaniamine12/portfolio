@@ -36,10 +36,6 @@
                 {
                     "name": "SQL",
                     "imgPath": "database.png"
-                },
-                {
-                    "name": "GraphQL",
-                    "imgPath": "graphql.png"
                 }
             ]
         },
@@ -80,6 +76,10 @@
                 },{
                     "name": "Kafka",
                     "imgPath": "kafka.png"
+                },
+                {
+                    "name": "GraphQL",
+                    "imgPath": "graphql.png"
                 }
 
 

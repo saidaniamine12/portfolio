@@ -1,6 +1,6 @@
 import InstituteCard from "./institute-card";
 import { useLanguage } from "@/components/custom/language-select.tsx/language-select-provider";
-
+import instituesData from "./institues-data-en-fr..json";
 const languages = {
   EN: [
     {
@@ -37,31 +37,34 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="flex flex-col gap-2 text-left tracked-section px-4"
+      className="flex flex-col w-full px-4 gap-8 tracked-section "
     >
-      <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl ">
-        <InstituteCard
-          name="National Engineering School of Sousse"
-          logoPath="logo_eniso.png"
-          degree="Engineering Degree in ICT"
-        />
-        <InstituteCard
-          name="El Manar Preparatory Engineering Institute"
-          logoPath="logo-ipeiem.jpg"
-          degree="Preparatory Engineering Studies"
-        />
-      </div>
-      <div className="flex flex-col border-l gap-2 text left gap-4 mt-4">
-        <span className=" text-l font-semibold tracking-tight pl-2 text-spfg">
-          {language === "EN" ? "Languages" : "Langues"}
-        </span>
-        <div className="flex flex-row gap-8 pl-4">
-          {languages[language].map((lang, index) => (
-            <span key={index}>
-              {lang.name} <span className="text-spfg"> - </span>{" "}
-              <span style={{ opacity: 0.8 }}>{lang.level}</span>
-            </span>
+      <span className=" flex text-start text-3xl">
+        {language === "EN" ? "Education" : "Éducation"}
+      </span>
+      <div className="flex flex-col gap-2 text-left  px-4">
+        <div className="flex grid auto-rows-min gap-4 md:grid-cols-2 rounded-xl ">
+          {instituesData[language].map((institute, index) => (
+            <InstituteCard
+              key={index}
+              name={institute.name}
+              logoPath={institute.logoPath}
+              degree={institute.degree}
+            />
           ))}
+        </div>
+        <div className="flex flex-col border-l gap-2 text left gap-4 mt-4">
+          <span className=" text-l font-semibold tracking-tight pl-2 text-spfg">
+            {language === "EN" ? "Languages" : "Langues"}
+          </span>
+          <div className="flex flex-row gap-8 pl-4">
+            {languages[language].map((lang, index) => (
+              <span key={index}>
+                {lang.name} <span className="text-spfg"> - </span>{" "}
+                <span style={{ opacity: 0.8 }}>{lang.level}</span>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

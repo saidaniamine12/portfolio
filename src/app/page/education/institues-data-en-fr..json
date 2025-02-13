@@ -1,0 +1,24 @@
+{
+    "EN" : [
+        {
+        "name": "National Engineering School of Sousse",
+        "logoPath": "logo_eniso.png",
+        "degree": "Engineering Degree in ICT"
+    },
+    {
+        "name": "El Manar Preparatory Engineering Institute",
+        "logoPath": "logo-ipeiem.jpg",
+        "degree": "Preparatory Engineering Studies"
+    }
+],
+    "FR" : [{
+        "name": "Ecole Nationale d'Ingénieurs de Sousse",
+        "logoPath": "logo_eniso.png",
+        "degree": "Diplôme d'Ingénieur en TIC"
+    },
+    {
+        "name": "Institut Préparatoire aux Etudes d'Ingénieurs El Manar",
+        "logoPath": "logo-ipeiem.jpg",
+        "degree": "Etudes Préparatoires d'Ingénieur"
+    }]
+}
