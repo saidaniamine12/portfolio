@@ -19,7 +19,7 @@ const Projects = () => {
           {projectsData.projects.map((project, index) => (
             <GlowWrapper
               key={index}
-              className={` hover:scale-[1.03] hover:border-none hover:shadow-2xl rounded-lg hover:rounded-none ${
+              className={`hover:scale-[1.03] hover:border-none hover:shadow-2xl rounded-lg hover:rounded-none ${
                 theme === "light" ? "bg-muted/50" : ""
               }`}
               style={{

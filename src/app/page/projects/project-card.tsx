@@ -90,7 +90,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
             </div>
           )}
         </div>
-        <CardTitle className={` text-start text-base pt-2`}>
+        <CardTitle className={`text-start text-base pt-2`}>
           <span
             onClick={() => {
               window.open(project.projectLink, "_blank", "noopener,noreferrer");

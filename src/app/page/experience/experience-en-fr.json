@@ -1,33 +1,71 @@
 {
     "EN" : [
         {
-        "companyName": "Company Name",
-        "position": "Position",
-        "companyLogo": "logo-ipeiem.jpg",
+        "companyName": "3D Wave",
+        "position": "Developer",
+        "companyLogo": "3dwave.png",
         "date": {
-            "start": "Start Date",
-            "end": "End Date"
+            "start": "Jun-06-2022",
+            "end": "Jul-29-2022"
         },
         "description": [
-             "Description Line 1",
-            "Description Line 2",
-            "Description Line 3"
+             "Extracted and cleaned ECG data from the Samsung Galaxy Watch 3 using Python and Pandas for model input.",
+            "Developed a Django-based server to manage data processing and integrate with Firebase for cloud storage and data handling.",
+            "Created and tested APIs to process heart rate data and return results, ensuring smooth integration and functionality using tools like Postman."
        
-        ]},
-        {
-        "companyName": "Company Name",
-        "position": "Position",
-        "companyLogo": "logo-ipeiem.jpg",
+        ],
+        "techStack": [
+            {
+                "name": "Python",
+                "iconPath": "python.png"
+            },
+            {
+                "name": "Django",
+                "iconPath": "django.png"
+            },
+            {
+                "name": "Firebase",
+                "iconPath": "firebase.png"
+            },
+            {
+                "name": "Postman",
+                "iconPath": "postman.png"
+            }
+        ]
+    },
+    {
+        "companyName": "3D Wave",
+        "position": "Developer",
+        "companyLogo": "3dwave.png",
         "date": {
-            "start": "Start Date",
-            "end": "End Date"
+            "start": "Jun-06-2022",
+            "end": "Jul-29-2022"
         },
         "description": [
-             "Description Line 1",
-            "Description Line 2",
-            "Description Line 3"
+             "Extracted and cleaned ECG data from the Samsung Galaxy Watch 3 using Python and Pandas for model input.",
+            "Developed a Django-based server to manage data processing and integrate with Firebase for cloud storage and data handling.",
+            "Created and tested APIs to process heart rate data and return results, ensuring smooth integration and functionality using tools like Postman."
        
-        ]}
+        ],
+        "techStack": [
+            {
+                "name": "Python",
+                "iconPath": "python.png"
+            },
+            {
+                "name": "Django",
+                "iconPath": "django.png"
+            },
+            {
+                "name": "Firebase",
+                "iconPath": "firebase.png"
+            },
+            {
+                "name": "Postman",
+                "iconPath": "postman.png"
+            }
+        ]
+    }
     ],
     "FR" : [
         {
@@ -42,6 +80,24 @@
             "Description Ligne 1",
             "Description Ligne 2",
             "Description Ligne 3"
+        ],
+        "techStack": [
+            {
+                "name": "Python",
+                "iconPath": "python.png"
+            },
+            {
+                "name": "Django",
+                "iconPath": "django.png"
+            },
+            {
+                "name": "Firebase",
+                "iconPath": "firebase.png"
+            },
+            {
+                "name": "Postman",
+                "iconPath": "postman.png"
+            }
         ]
     }
     ]

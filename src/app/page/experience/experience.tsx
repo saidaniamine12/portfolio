@@ -1,5 +1,10 @@
 import experienceData from "@/app/page/experience/experience-en-fr.json";
 import { useLanguage } from "@/components/custom/language-select.tsx/language-select-provider";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 const Experience = () => {
   const { language } = useLanguage();
   const experienceDataLength = experienceData[language].length;
@@ -26,15 +31,15 @@ const Experience = () => {
                   <span className="text-spfg">-</span>
                   <span className="">{experience.date.end}</span>
                 </div>
-                <div className="flex justify-center w-full">
+                <div className="flex justify-center w-full h-full content-center">
                   <img
-                    className="flex max-w-[100px]  ratio-1:1"
+                    className="flex max-w-[100px] max-h-[100px]  ratio-1:1 self-center"
                     src={`${experience.companyLogo}`}
                   />
                 </div>
               </div>
               {/* job title  description*/}
-              <div className="flex flex-col gap-2 w-3/5 ">
+              <div className="flex flex-col gap-2 w-3/5 ml-1">
                 <div className="flex flex-row gap-4">
                   <span className="  tracking-tight">
                     {experience.companyName}
@@ -54,6 +59,29 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="flex flex-row gap-3 mt-2 pl-4">
+                  <span className="text-spfg">Technologies: </span>
+                  {experience.techStack.map((tech, index) => {
+                    return (
+                      <Tooltip key={index}>
+                        <TooltipTrigger className="whitespace-nowrap overflow-hidden ">
+                          <img
+                            src={tech.iconPath}
+                            alt={tech.name}
+                            style={{
+                              width: "25px",
+                              height: "25px",
+                              borderRadius: "3px",
+                            }}
+                          />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{tech.name}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    );
+                  })}
+                </div>
               </div>
             </div>
 
