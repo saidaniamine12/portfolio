@@ -60,7 +60,7 @@ const Experience = () => {
                   ))}
                 </ul>
                 <div className="flex flex-row gap-3 mt-2 pl-4">
-                  <span className="text-spfg">Technologies: </span>
+                  <span className="font-semibold">Technologies: </span>
                   {experience.techStack.map((tech, index) => {
                     return (
                       <Tooltip key={index}>
