@@ -1,52 +1,137 @@
 {
-    "EN" : [
+    "data" : [
+        {
+            "companyName": "Sofrecom",
+            "position": "Software Engineer Intern",
+            "companyLogo": "sofrecom.jpg",
+            "date": {
+                "EN" : {
+                    "start": "5th Feb 2024",
+                    "end": "31st Jul 2024"
+                },
+                "FR" : {
+                    "start": "5 février 2024",
+                    "end": "31 juillet 2024"
+                }
+            },
+            "description":{
+                "EN": [
+                    "Designed and developed a no-code development platform for websites and small applications, enabling users to build without coding knowledge.",
+                    "Integrated a drag-and-drop editor with a rich set of pre-built components to simplify the design process.",
+                    "Implemented features allowing multiple users to collaborate on the same project in real-time, enhancing teamwork and productivity."
+                ],
+                "FR": [
+                    "Conception et développement d'une plateforme de développement sans code pour sites Web et petites applications, permettant aux utilisateurs de construire sans connaissance en programmation.",    
+                    "Intégration d'un éditeur de glisser-déposer avec un ensemble riche de composants pré-construits pour simplifier le processus de conception.",
+                    "Implémentation de fonctionnalités permettant à plusieurs utilisateurs de collaborer sur le même projet en temps réel, améliorant le travail d'équipe et la productivité."
+                ]
+            },
+            "techStack": [
+                {
+                    "name": "TypeScript",
+                    "iconPath": "typescript.png"
+                },
+                {
+                    "name": "NestJS",
+                    "iconPath": "nestjs.svg"
+                },
+                {
+                    "name": "GrapesJS",
+                    "iconPath": "grapesjs.jpg"
+                },
+                {
+                    "name": "React",
+                    "iconPath": "react.png"
+                },
+                {
+                    "name": "Git",
+                    "iconPath": "git.png"
+                },
+                {
+                    "name": "GraphQL",
+                    "iconPath": "graphql.png"
+                },
+                {
+                    "name": "MongoDB",
+                    "iconPath": "mongodb.png"
+                }
+            ]
+        },
+        {
+            "companyName": "VRMEG",
+            "position": "Software Engineer Intern",
+            "companyLogo": "vermeg.png",
+            "date": {
+                "EN" : {
+                    "start": "12th June 2023",
+                    "end": "18th August 2023"
+                },
+                "FR" : {
+                    "start": "12 juin 2023",
+                    "end": "18 août 2023"
+                }
+            },
+            "description":{
+                "EN": [
+                    "Developed a Natural Language Processing (NLP) system utilizing SBERT for semantic search, improving ticket retrieval efficiency in Jira-based environments.",
+                    "Implemented an indexing and query flow using Milvus and PostgreSQL, enabling accurate ticket searches by encoding summaries and descriptions with pre-trained BERT models.",
+                    "Designed and deployed a user-friendly interface and RESTful APIs in Spring Framework, integrating smooth authentication, search functionalities, and real-time ticket updates."
+                ],
+                "FR": [
+                    "Développement d'un système de traitement du langage naturel (NLP) utilisant SBERT pour la recherche sémantique, améliorant l'efficacité de récupération des tickets dans les environnements basés sur Jira.",
+                    "Implémentation d'un flux d'indexation et de requête en utilisant Milvus et PostgreSQL, permettant des recherches de tickets précises en encodant des résumés et des descriptions avec des modèles BERT pré-entraînés.",
+                    "Conception et déploiement d'une interface conviviale et d'API RESTful dans Spring Framework, intégrant une authentification fluide, des fonctionnalités de recherche et des mises à jour de tickets en temps réel."
+                ]
+            },
+            "techStack": [
+                {
+                    "name": "Java",
+                    "iconPath": "java.png"
+                },
+                {
+                    "name": "SpringBoot",
+                    "iconPath": "spring-boot.png"
+                },
+                {
+                    "name": "PostgresSQL",
+                    "iconPath": "postgresql.png"
+                },
+                {
+                    "name": "Milvus",
+                    "iconPath": "milvus.png"
+                },
+                {
+                    "name": "Hugging Face",
+                    "iconPath": "hugging-face.svg"
+                }
+            ]
+        },
         {
         "companyName": "3D Wave",
-        "position": "Developer",
+        "position": "Developer Intern",
         "companyLogo": "3dwave.png",
         "date": {
-            "start": "Jun-06-2022",
-            "end": "Jul-29-2022"
-        },
-        "description": [
-             "Extracted and cleaned ECG data from the Samsung Galaxy Watch 3 using Python and Pandas for model input.",
-            "Developed a Django-based server to manage data processing and integrate with Firebase for cloud storage and data handling.",
-            "Created and tested APIs to process heart rate data and return results, ensuring smooth integration and functionality using tools like Postman."
-       
-        ],
-        "techStack": [
-            {
-                "name": "Python",
-                "iconPath": "python.png"
+            "EN" : {
+                "start": "6th June 2022",
+                "end": "29th July 2022"
             },
-            {
-                "name": "Django",
-                "iconPath": "django.png"
-            },
-            {
-                "name": "Firebase",
-                "iconPath": "firebase.png"
-            },
-            {
-                "name": "Postman",
-                "iconPath": "postman.png"
+            "FR" : {
+                "start": "06 juin 2022",
+                "end": "29 juillet 2022"
             }
-        ]
-    },
-    {
-        "companyName": "3D Wave",
-        "position": "Developer",
-        "companyLogo": "3dwave.png",
-        "date": {
-            "start": "Jun-06-2022",
-            "end": "Jul-29-2022"
         },
-        "description": [
-             "Extracted and cleaned ECG data from the Samsung Galaxy Watch 3 using Python and Pandas for model input.",
-            "Developed a Django-based server to manage data processing and integrate with Firebase for cloud storage and data handling.",
-            "Created and tested APIs to process heart rate data and return results, ensuring smooth integration and functionality using tools like Postman."
-       
-        ],
+        "description":{
+            "EN": [
+                "Extracted and cleaned ECG data from the Samsung Galaxy Watch 3 using Python and Pandas for model input.",
+                "Developed a Django-based server to manage data processing and integrate with Firebase for cloud storage and data handling.",
+                "Created and tested APIs to process heart rate data and return results, ensuring smooth integration and functionality using tools like Postman."
+            ],
+            "FR": [
+                "Extraction et nettoyage des données ECG de la Samsung Galaxy Watch 3 à l'aide de Python et Pandas pour l'entrée du modèle.",
+                "Développé un serveur basé sur Django pour gérer le traitement des données et s'intégrer à Firebase pour le stockage cloud et la manipulation des données.",
+                "Création et test d'API pour traiter les données de fréquence cardiaque et renvoyer les résultats, assurant une intégration et une fonctionnalité fluides à l'aide d'outils comme Postman."
+            ]
+        },
         "techStack": [
             {
                 "name": "Python",
@@ -66,39 +151,6 @@
             }
         ]
     }
-    ],
-    "FR" : [
-        {
-        "companyName": "Nom de l'entreprise",
-        "companyLogo": "logo-ipeiem.jpg",
-        "position": "Position",
-        "date": {
-            "start": "Date de début",
-            "end": "Date de fin"
-        },
-        "description": [
-            "Description Ligne 1",
-            "Description Ligne 2",
-            "Description Ligne 3"
-        ],
-        "techStack": [
-            {
-                "name": "Python",
-                "iconPath": "python.png"
-            },
-            {
-                "name": "Django",
-                "iconPath": "django.png"
-            },
-            {
-                "name": "Firebase",
-                "iconPath": "firebase.png"
-            },
-            {
-                "name": "Postman",
-                "iconPath": "postman.png"
-            }
-        ]
-    }
-    ]
+   
+]
 }

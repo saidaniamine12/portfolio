@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 const Experience = () => {
   const { language } = useLanguage();
-  const experienceDataLength = experienceData[language].length;
+  const experienceDataLength = experienceData.data.length;
   return (
     <div
       id="experience"
@@ -20,16 +20,18 @@ const Experience = () => {
         id="experience"
         className="flex flex-col w-full gap-14 tracked-section px-4"
       >
-        {experienceData[language].map((experience, index) => (
+        {experienceData.data.map((experience, index) => (
           <div key={index} className={`flex flex-col w-full  gap-10 `}>
             <div className="flex flex-row gap-4 w-full  border-l">
               {/* date + company logo */}
               <div className="flex flex-col w-1/4 gap-4">
                 <div className="flex flex-row gap-2 w-full justify-center text-[14px]">
                   {/* date*/}
-                  <span className="flex ">{experience.date.start}</span>
+                  <span className="flex ">
+                    {experience.date[language].start}
+                  </span>
                   <span className="text-spfg">-</span>
-                  <span className="">{experience.date.end}</span>
+                  <span className="">{experience.date[language].end}</span>
                 </div>
                 <div className="flex justify-center w-full h-full content-center">
                   <img
@@ -53,7 +55,7 @@ const Experience = () => {
                   role="list"
                   className={`flex flex-col pl-8 pt-4 list-disc marker:text-spfg gap-2 text-start`}
                 >
-                  {experience.description.map((desc, index) => (
+                  {experience.description[language].map((desc, index) => (
                     <li key={index} className=" opacity-[0.85]">
                       {desc}
                     </li>

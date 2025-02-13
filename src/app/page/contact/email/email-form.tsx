@@ -71,27 +71,27 @@ const EmailForm = () => {
       <Input
         type="text"
         placeholder={language === "EN" ? "Name" : "Nom"}
-        className="border-b-2 border-gray-400 p-2 mb-4"
+        className=" border-gray-400 p-2 mb-4 "
         {...register("name")}
         disabled={loading}
       />
       <Input
         type="email"
         placeholder="Email"
-        className="border-b-2 border-gray-400 p-2 mb-4"
+        className=" border-gray-400 p-2 mb-4"
         {...register("email")}
         disabled={loading}
       />
       <Input
         type="subject"
         placeholder={language === "EN" ? "Subject" : "Sujet"}
-        className="border-b-2 border-gray-400 p-2 mb-4"
+        className=" border-gray-400 p-2 mb-4"
         {...register("subject")}
         disabled={loading}
       />
       <Textarea
         placeholder="Message"
-        className="border-b-2 border-gray-400 p-2 mb-4"
+        className=" border-gray-400 p-2 mb-4"
         {...register("message")}
         disabled={loading}
       />
