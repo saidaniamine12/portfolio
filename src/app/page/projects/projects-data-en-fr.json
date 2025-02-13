@@ -76,6 +76,45 @@
             ]
         },
         {
+            "title": "Resume",
+            "description":{
+                "EN": [
+                    "Built a dynamic and responsive personal portfolio, showcasing my skills and projects with a modern design.",
+                    "Developed reusable and modular components to ensure maintainability and scalability, providing a smooth user experience across devices.."
+
+                ],
+                "FR": [
+                    "Création d'un portfolio personnel dynamique et réactif avec React, TypeScript et Tailwind CSS, mettant en valeur mes compétences et projets avec un design moderne.",
+                    "Développement de composants réutilisables et modulaires pour garantir la maintenabilité et la scalabilité, offrant une expérience utilisateur fluide sur tous les appareils."                    
+                ]
+        },
+        "projectLink": "https://saidaniamine12.github.io/mohamed-amine-saidani",
+        "githubLink": "https://github.com/saidaniamine12/resume" ,
+        "projectImgLink": "cv.png",
+        "stack": [
+            {
+                "name": "TypeScript",
+                "imgPath": "typescript.png"
+            },
+            {
+                "name": "React",
+                "imgPath": "react.png"
+            },
+            {
+                "name": "Tailwind CSS",
+                "imgPath": "tailwindcss.png"
+            },
+            {
+                "name": "HTML",
+                "imgPath": "html.png"
+            },
+            {
+                "name": "CSS",
+                "imgPath": "css-3.png"
+            }
+        ]
+    },
+        {
             "title": "IOT Data Collector",
             "description":{
                 "EN": [
@@ -116,6 +155,86 @@
                 "imgPath": "azure.png"
             }
         ]
-    }
+        },
+        {
+            "title": "French Tacos App",
+            "description":{
+                "EN": [
+                    "Developed a robust back-end with Spring Boot and MySQL to handle user requests, process orders, and ensure reliable data storage and performance.",
+                    "Designed and implemented a dynamic, responsive front-end using Angular to provide an intuitive and seamless taco ordering experience.",
+                    "Implemented real-time order management and reliable data storage for a smooth user experience."
+
+                ],
+                "FR": [
+                    "Réalisation d'un back-end robuste avec Spring Boot et MySQL pour gérer les demandes des utilisateurs, traiter les commandes et assurer une gestion fiable des données et des performances.",
+                    "Conception et mise en œuvre d'une interface front-end dynamique et réactive avec Angular pour offrir une expérience de commande de tacos intuitive et fluide.",
+                    "Mise en place d'une gestion des commandes en temps réel et d'un stockage des données fiable pour garantir une expérience utilisateur optimale."
+                ]
+
+        },
+        "projectLink": "",
+        "githubLink": "https://github.com/saidaniamine12/TacoApp" ,
+        "projectImgLink": "tacos.png",
+        "stack": [
+            {
+                "name": "Java",
+                "imgPath": "java.png"
+            },
+            {
+                "name": "SpringBoot",
+                "imgPath": "spring-boot.png"
+            },
+            {
+                "name": "Angular",
+                "imgPath": "angular.png"
+            },
+            {
+                "name": "MySQL",
+                "imgPath": "mysql.png"
+            }
+        ]
+        },
+        {
+            "title": "Book Exchange Platform",
+            "description":{
+                "EN": [
+                    "Built a book exchange platform where users can post books for others to borrow, developed using the MEAN stack.",
+                    "Developed a real-time messaging system using Socket.io to facilitate seamless communication between users.",
+                    "Created an interactive and functional user interface with Angular, paired with a robust database management system using MongoDB.."
+
+                ],
+                "FR": [
+                    "Création d'une plateforme d'échange de livres où les utilisateurs peuvent poster leurs livres à prêter, développée avec le stack MEAN.",
+                    "Développement d'un système de messagerie en temps réel utilisant Socket.io pour permettre une communication fluide entre les utilisateurs.",
+                    "Mise en place d'une interface utilisateur interactive et fonctionnelle avec Angular, couplée à une gestion de base de données robuste avec MongoDB."
+                ]
+
+        },
+        "projectLink": "",
+        "githubLink": "https://github.com/saidaniamine12/book-Exchange" ,
+        "projectImgLink": "stack-of-books.png",
+        "stack": [
+            {
+                "name": "TypeScript",
+                "imgPath": "typescript.png"
+            },
+            {
+                "name": "MongoDB",
+                "imgPath": "mongodb.png"
+            },
+            {
+                "name": "Express",
+                "imgPath": "express.webp"
+            },
+            {
+                "name": "Angular",
+                "imgPath": "angular.png"
+            },
+            {
+                "name": "Node.js",
+                "imgPath": "node.png"
+            }
+        ]
+        }
     ]
 }
