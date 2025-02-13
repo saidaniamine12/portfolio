@@ -14,9 +14,9 @@ const Skills = () => {
       <span className=" flex text-start text-3xl">
         {language === "EN" ? "Skills" : "Compétences"}
       </span>
-      <span className=" flex text-start text-3xl">
+      <span className=" flex text-start text-3xl max-w-[50%]">
         {language === "EN" ? (
-          <span className="max-w-[50%]">
+          <span>
             <span className="text-spfg ">Full Stack </span>software developer
             with experience in
             <span className="text-spfg"> Front-End </span> and
@@ -24,10 +24,11 @@ const Skills = () => {
           </span>
         ) : (
           <span>
-            <span className="text-spfg"></span> Développeur de logiciels Full
-            Stack avec une expérience dans les technologies
-            <span className="text-spfg"></span> Front-End et{" "}
-            <span className="text-spfg"></span> Back-End
+            <span className="text-spfg"></span> Développeur de logiciels
+            <span className="text-spfg "> Full Stack </span>avec une expérience
+            dans les technologies
+            <span className="text-spfg"> Front-End </span>et
+            <span className="text-spfg"> Back-End</span>
           </span>
         )}
       </span>

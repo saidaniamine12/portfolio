@@ -16,12 +16,14 @@ const Contact = () => {
       <span className="flex text-3xl self-start">
         {language === "EN" ? (
           <span>
-            {" "}
-            Get in touch and let's{" "}
+            Get in touch and let's
             <span className="text-spfg"> work together</span>
           </span>
         ) : (
-          <span>travaillons ensemble</span>
+          <span>
+            Contactez-moi et{" "}
+            <span className="text-spfg"> travaillons ensemble</span>
+          </span>
         )}
       </span>
 
