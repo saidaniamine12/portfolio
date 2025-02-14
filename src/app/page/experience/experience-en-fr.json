@@ -4,6 +4,9 @@
             "companyName": "Sofrecom",
             "position": "Software Engineer Intern",
             "companyLogo": "sofrecom.jpg",
+            "demoVideoLink":"https://www.youtube.com/watch?v=gEjHqp6iLhg",
+            "reportLink":"https://www.dropbox.com/scl/fi/s5rqsalx7el1771w53z50/Rapport_Sofrecom-green-no-code_MOHAMED_AMINE_SAIDANI_GTE3_1.pdf?rlkey=8dtoisausdave0jb7xab145c4&st=o0q8zyd9&dl=1",
+            "presentationLink":"https://www.dropbox.com/scl/fi/6p22yabwssd811a0h38tq/Mohamed-Amine-Saidani-Presentation-Green-no-code-Sofrecom-pfe.pptx?rlkey=vomcilepysm42iokusovt9wp9&st=t6ds50c3&dl=1",
             "date": {
                 "EN" : {
                     "start": "5th Feb 2024",
@@ -61,6 +64,9 @@
             "companyName": "VRMEG",
             "position": "Software Engineer Intern",
             "companyLogo": "vermeg.png",
+            "demoVideoLink":"",
+            "reportLink":"https://www.dropbox.com/scl/fi/4b3s9n3zxb2do3djwdh1s/Internship_project_vermeg_2023.pdf?rlkey=0rh7emd9wkkxa6et55w4f5qar&st=bzsnsj3j&dl=1",
+            "presentationLink":"https://www.dropbox.com/scl/fi/03zttfvyyh1nwnm4w6qcb/Mohamed-Amine-Saidani-vermeg-Presentation.pptx?rlkey=4lqw46uhvvpgx7ddq0vs43ogi&st=z43lpu2q&dl=1",
             "date": {
                 "EN" : {
                     "start": "12th June 2023",
@@ -93,6 +99,10 @@
                     "iconPath": "spring-boot.png"
                 },
                 {
+                    "name": "Angular",
+                    "iconPath": "angular.png"
+                },
+                {
                     "name": "PostgresSQL",
                     "iconPath": "postgresql.png"
                 },
@@ -110,6 +120,9 @@
         "companyName": "3D Wave",
         "position": "Developer Intern",
         "companyLogo": "3dwave.png",
+        "demoVideoLink":"",
+        "reportLink":"https://www.dropbox.com/scl/fi/9bj9affjqi2c5pbku88dm/Project_Internship3Dwave2022_mohmamed_amine_saidani.pdf?rlkey=i8md5piegifaek8y5vqsm9vnr&st=lwhmsvd6&dl=1",
+        "presentationLink":"https://www.dropbox.com/scl/fi/zbcpf1dw3llpueqxpx3sz/3d-wave-presentation.pptx?rlkey=qq3lxgae8ilf3ab7r5uf034io&st=nq57run9&dl=1",
         "date": {
             "EN" : {
                 "start": "6th June 2022",

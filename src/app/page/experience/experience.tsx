@@ -1,10 +1,12 @@
 import experienceData from "@/app/page/experience/experience-en-fr.json";
 import { useLanguage } from "@/components/custom/language-select.tsx/language-select-provider";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { BookOpenText, Presentation, Youtube } from "lucide-react";
 const Experience = () => {
   const { language } = useLanguage();
   const experienceDataLength = experienceData.data.length;
@@ -83,6 +85,61 @@ const Experience = () => {
                       </Tooltip>
                     );
                   })}
+                </div>
+                <div className="flex flex-row gap-4 mt-4 pl-4">
+                  {
+                    // if there is no presentation link, do not show the button
+                    experience.presentationLink.trim().length > 0 ? (
+                      <Button variant="outline">
+                        <Presentation />
+                        <a
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={experience.presentationLink}
+                        >
+                          {language === "EN" ? "Presentation" : "Presentation"}
+                        </a>
+                      </Button>
+                    ) : (
+                      <></>
+                    )
+                  }
+                  {
+                    // if there is no demo video link, do not show the button
+                    experience.demoVideoLink.trim().length > 0 ? (
+                      <Button variant="outline">
+                        <Youtube />
+                        <a
+                          href={experience.demoVideoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {language === "EN" ? "Demo" : "Démo"}
+                        </a>
+                      </Button>
+                    ) : (
+                      <></>
+                    )
+                  }
+                  {
+                    // if there is no report link, do not show the button
+                    experience.reportLink.trim().length > 0 ? (
+                      <Button variant="outline">
+                        <BookOpenText />
+                        <a
+                          download
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={experience.reportLink}
+                        >
+                          {language === "EN" ? "Report" : "Rapport"}
+                        </a>
+                      </Button>
+                    ) : (
+                      <></>
+                    )
+                  }
                 </div>
               </div>
             </div>
