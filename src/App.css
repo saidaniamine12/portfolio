@@ -88,10 +88,3 @@ div[placeholder^="Menu-List"] button:hover {
 }
 
 
-
-/* to stop the ring effect afer clicking*/
-button[aria-expanded="false"]:focus {
-  outline: none;
-  border: none;
-}
-

@@ -6,7 +6,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BookOpenText, Presentation, Youtube } from "lucide-react";
+import { BookOpenText, Presentation } from "lucide-react";
+import YoutubeDialog from "./youtube-dialog";
 const Experience = () => {
   const { language } = useLanguage();
   const experienceDataLength = experienceData.data.length;
@@ -108,16 +109,7 @@ const Experience = () => {
                   {
                     // if there is no demo video link, do not show the button
                     experience.demoVideoLink.trim().length > 0 ? (
-                      <Button variant="outline">
-                        <Youtube />
-                        <a
-                          href={experience.demoVideoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {language === "EN" ? "Demo" : "Démo"}
-                        </a>
-                      </Button>
+                      <YoutubeDialog demoVideoLink={experience.demoVideoLink} />
                     ) : (
                       <></>
                     )
