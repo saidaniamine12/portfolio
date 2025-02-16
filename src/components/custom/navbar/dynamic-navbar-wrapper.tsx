@@ -10,7 +10,6 @@ const DynamicNavbarWrapper = () => {
   const { open, isMobile } = useSidebar();
   const [navbarWidth, setNavbarWidth] = useState<string>();
   const [borderRadius, setBorderRadius] = useState("12px");
-  const divRef = useRef<HTMLDivElement>(null);
 
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
 
@@ -66,7 +65,6 @@ const DynamicNavbarWrapper = () => {
 
   return (
     <div
-      ref={divRef}
       style={{
         transition: "width 0.3s ease",
         width: navbarWidth,

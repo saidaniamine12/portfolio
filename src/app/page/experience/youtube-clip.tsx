@@ -23,21 +23,7 @@ const YoutubeClip: React.FC<ReactClipProps> = ({ videoId }) => {
     },
   };
 
-  const _onReady = (event: { target: { pauseVideo: () => void } }) => {
-    event.target.pauseVideo();
-  };
-
-  return (
-    <YouTube
-      videoId={videoId}
-      opts={options}
-      onReady={_onReady}
-      id="video"
-      loop
-      muted
-      autoPlay
-    />
-  );
+  return <YouTube videoId={videoId} opts={options} id="video" muted autoPlay />;
 };
 
 export default YoutubeClip;

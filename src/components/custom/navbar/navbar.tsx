@@ -39,15 +39,23 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
             as="li"
             variant="small"
             color="blue-gray"
-            className=""
+            className="cursor-pointer"
             placeholder=""
             onPointerEnterCapture={() => {}}
             onPointerLeaveCapture={() => {}}
+            onClick={() => {
+              const element = document.getElementById(navItem.id);
+              if (element) {
+                const elementPosition =
+                  element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                  top: elementPosition - 50, // Adjust 10px above the element
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
-            <a
-              href={navItem.link}
-              className="flex items-center gap-x-2 p-1 font-medium"
-            >
+            <a className="flex items-center gap-x-2 p-1 font-medium">
               <div className="flex mb-2 w-5 h-5">
                 {(() => {
                   switch (navItem.icon) {
@@ -92,12 +100,21 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
         )}
         {/*  mohamed amine saidani photo */}
         <Typography
-          as="a"
-          href="/about"
-          className="flex flex-row display-block gap-2 mr-2 pl-4  font-medium align-middle flex-shrink-0"
+          className="flex flex-row display-block gap-2 mr-2 pl-4  font-medium align-middle flex-shrink-0 cursor-pointer"
           placeholder=""
           onPointerEnterCapture={() => {}}
           onPointerLeaveCapture={() => {}}
+          onClick={() => {
+            const element = document.getElementById("about");
+            if (element) {
+              const elementPosition =
+                element.getBoundingClientRect().top + window.pageYOffset;
+              window.scrollTo({
+                top: elementPosition - 50, // Adjust 10px above the element
+                behavior: "smooth",
+              });
+            }
+          }}
         >
           <img
             src="mohamed-amine-saidani.jpg"
