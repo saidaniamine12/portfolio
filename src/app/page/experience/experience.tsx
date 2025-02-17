@@ -27,7 +27,7 @@ const Experience = () => {
           <div key={index} className={`flex flex-col w-full  gap-10 `}>
             <div className="flex flex-row gap-4 w-full  border-l">
               {/* date + company logo */}
-              <div className="flex flex-col w-1/4 gap-4">
+              <div data-aos="fade-right" className="flex flex-col w-1/4 gap-4">
                 <div className="flex flex-row gap-2 w-full justify-center text-[14px]">
                   {/* date*/}
                   <span className="flex ">
@@ -44,7 +44,10 @@ const Experience = () => {
                 </div>
               </div>
               {/* job title  description*/}
-              <div className="flex flex-col gap-2 w-3/5 ml-1">
+              <div
+                data-aos="fade-left"
+                className="flex flex-col gap-2 w-3/5 ml-1"
+              >
                 <div className="flex flex-row gap-4">
                   <span className="  tracking-tight">
                     {experience.companyName}

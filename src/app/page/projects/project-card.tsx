@@ -42,6 +42,7 @@ const ProjectCard = ({ className, project }: ProjectCardProps) => {
   const { language } = useLanguage();
   return (
     <Card
+      data-aos="fade-up"
       style={{
         borderRadius: "0px",
         transition: "all 0.3s ease-in-out",

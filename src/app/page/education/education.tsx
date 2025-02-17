@@ -51,6 +51,7 @@ const Education = () => {
               name={institute.name}
               logoPath={institute.logoPath}
               degree={institute.degree}
+              index={index}
             />
           ))}
         </div>
@@ -58,7 +59,7 @@ const Education = () => {
           <span className=" text-l font-semibold tracking-tight pl-2 text-spfg">
             {language === "EN" ? "Languages" : "Langues"}
           </span>
-          <div className="flex flex-row gap-8 pl-4">
+          <div data-aos="fade-right" className="flex flex-row gap-8 pl-4">
             {languages[language].map((lang, index) => (
               <span key={index}>
                 {lang.name} <span className="text-spfg"> - </span>{" "}

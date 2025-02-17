@@ -14,7 +14,11 @@ const About = () => {
     >
       <div className="flex flex-col gap-10 p-4">
         {/* hello */}
-        <div className="flex flex-row gap-2 text-3xl ">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="500"
+          className="flex flex-row gap-2 text-3xl "
+        >
           <h2 className="font-semibold tracking-tight">
             {" "}
             {language === "EN" ? "Hello" : "Salut"}
@@ -22,7 +26,11 @@ const About = () => {
           <span className={styles["wave"]}>👋</span>
         </div>
         {/* Introduction */}
-        <div className="flex flex-col gap-2 text-3xl items-start">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="750"
+          className="flex flex-col gap-2 text-3xl items-start"
+        >
           {language === "EN" ? (
             <>
               <h2 className=" whitespace-nowrap ">
@@ -52,7 +60,11 @@ const About = () => {
           )}
         </div>
         {/* Paragraph */}
-        <div className="flex flex-col gap-2 text-left ">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="1000"
+          className="flex flex-col gap-2 text-left "
+        >
           {language === "EN" ? (
             <>
               <span className="">
@@ -99,7 +111,11 @@ const About = () => {
         </div>
       </div>
       {/* Image */}
-      <div className="flex justify-center items-center">
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="750"
+        className="flex justify-center items-center"
+      >
         <div className={`${styles["card"]} rotate-[-10deg]  overflow-hidden `}>
           <img
             className="scale-[1.2] mr-4 object-cover  rotate-[10deg] overflow-hidden"

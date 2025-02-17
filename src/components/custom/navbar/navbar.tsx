@@ -93,7 +93,11 @@ export const NavbarDefault: React.FC<NavbarDefaultProps> = ({
       // max-w-screen-xl to make it max width 1280px
       className={`px-4 py-1 lg:px-8 ${isScrolled ? "lg:py-1" : "lg:py-4"} `}
     >
-      <div className=" flex items-center justify-between  ">
+      <div
+        data-aos="zoom-in-down"
+        data-aos-delay="1200"
+        className=" flex items-center justify-between  "
+      >
         {/*  side bar trigger */}
         {isMobile && (
           <SidebarTrigger className="-ml-1 mr-1 bg-transparent text-foreground hover:bg-sidebar-accent" />

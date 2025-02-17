@@ -4,15 +4,19 @@ interface InstituteCardProps {
   name: string;
   logoPath: string;
   degree: string;
+  index: number;
 }
 const InstituteCard: React.FC<InstituteCardProps> = ({
+  index,
   name,
   logoPath,
   degree,
 }) => {
   const { theme } = useTheme();
+
   return (
     <div
+      data-aos={"fade-" + (index % 2 === 0 ? "right" : "left")}
       style={{
         backdropFilter: "blur(1px)",
         background: "rgba(255, 255, 255, 0.01)",

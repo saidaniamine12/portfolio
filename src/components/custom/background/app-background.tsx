@@ -7,7 +7,11 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 import nasaDarkTheme from "./nasa-theme-dark.json";
 import nasaLightTheme from "./nasa-theme-light.json";
 import { useTheme } from "@/components/theme-provider";
-const AppBackground = () => {
+
+interface AppBackgroundProps {
+  setLoaded: (value: boolean) => void;
+}
+const AppBackground: React.FC<AppBackgroundProps> = ({ setLoaded }) => {
   const [init, setInit] = useState(false);
   const { theme } = useTheme();
   const [themeLoaded, setThemeLoaded] = useState(nasaDarkTheme);
@@ -26,10 +30,18 @@ const AppBackground = () => {
       setInit(true);
     });
   }, []);
+  useEffect(() => {
+    console.log("init", init);
+    if (init) {
+      setLoaded(true);
+    }
+  }, [init]);
 
   useEffect(() => {
     if (theme === "dark") {
-      setThemeLoaded(nasaDarkTheme);
+      if (themeLoaded !== nasaDarkTheme) {
+        setThemeLoaded(nasaDarkTheme);
+      }
     } else {
       setThemeLoaded(nasaLightTheme);
     }

@@ -14,7 +14,10 @@ const Skills = () => {
       <span className=" flex text-start text-3xl">
         {language === "EN" ? "Skills" : "Compétences"}
       </span>
-      <span className=" flex text-start text-3xl max-w-[50%]">
+      <span
+        data-aos="fade-up"
+        className=" flex text-start text-3xl max-w-[50%]"
+      >
         {language === "EN" ? (
           <span>
             <span className="text-spfg ">Full Stack </span>software developer
@@ -33,10 +36,13 @@ const Skills = () => {
         )}
       </span>
       <div id="skills" className="flex w-full flex-row pt-4 grid-cols-2 gap-4">
-        <div className="flex flex-col w-2/5 items-center ">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col w-2/5 items-center "
+        >
           <Omnitrix />
         </div>
-        <div className="flex flex-col  gap-10 pl-5">
+        <div data-aos="fade-left" className="flex flex-col  gap-10 pl-5">
           <span className="text-start pl-4 text-3xl">
             {
               skillsData.data.find((data) => data.id === openedSkillId)?.title[

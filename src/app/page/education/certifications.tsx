@@ -37,7 +37,7 @@ const Certifications = () => {
       </span>
       <div className="flex flex-col gap-8 pl-4">
         {certificatesData.data.map((certificate, index) => (
-          <div key={index} className="flex flex-row gap-4">
+          <div data-aos="fade-up" key={index} className="flex flex-row gap-4">
             <div className="flex flex-col self-center">
               <img src={certificate.organizationImgSrc} className="w-20 h-20" />
             </div>

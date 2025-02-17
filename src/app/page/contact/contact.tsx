@@ -13,7 +13,7 @@ const Contact = () => {
       <h1 className="flex text-3xl self-start">
         {language === "EN" ? "Contact" : "Contact"}
       </h1>
-      <span className="flex text-3xl self-start">
+      <span data-aos="fade-right" className="flex text-3xl self-start">
         {language === "EN" ? (
           <span>
             Get in touch and let's
@@ -28,6 +28,7 @@ const Contact = () => {
       </span>
 
       <div
+        data-aos="fade-left"
         className={`flex self-center w-3/5 flex-col ${
           theme === "light" ? "bg-muted/50" : ""
         }`}
