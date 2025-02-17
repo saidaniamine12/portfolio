@@ -1,0 +1,71 @@
+{
+    "data": [
+        {
+            "title": "Prometheus Certified Associate (PCA)",
+            "organization": "kodekloud",
+            "organizationImgSrc": "kodekloud_logo.jpg",
+            "certificateLink": "https://learn.kodekloud.com/certificate/2DEA6BA447B3-2ED5A655FD7A-2D16BB74AAE5",
+            "date": {
+                "EN": "30th Jan 2024",
+                "FR": "30 Jan 2024"
+                }
+            
+        },
+        {
+            "title": "Advanced Golang",
+            "organization": "kodekloud",
+            "organizationImgSrc": "kodekloud_logo.jpg",
+            "certificateLink": "https://learn.kodekloud.com/certificate/2DEA6BA447B3-2ED80C429C72-2D16BB74AAE5",
+            "date": {
+                "EN": "16th Jan 2024",
+                "FR": "16 Jan 2024"
+                }
+            
+        },
+        {
+            "title": "Certified Kubernetes Application Developer (CKAD)",
+            "organization": "kodekloud",
+            "organizationImgSrc": "kodekloud_logo.jpg",
+            "certificateLink": "https://learn.kodekloud.com/certificate/2DEA6BA447B3-2D16C100A558-2D16BB74AAE5",
+            "date": {
+                "EN": "5th Jan 2024",
+                "FR": "05 Jan 2024"
+                }
+            
+        }, 
+        {
+            "title": "Microsoft certified: Azure Fundamentals",
+            "organization": "Microsoft",
+            "organizationImgSrc": "microsoft_logo.jpg",
+            "certificateLink": "https://www.credly.com/badges/c61a0013-e46f-48e5-a357-1aa199c7e85f/public_url",
+            "date": {
+                "EN": "22nd May 2023",
+                "FR": "22 Mai 2023"
+                }
+            
+        },
+        {
+            "title": " Relational Database Administration (DBA)",
+            "organization": "IBM",
+            "organizationImgSrc": "ibm_logo.jpg",
+            "certificateLink": "https://www.coursera.org/account/accomplishments/certificate/PMUB4HE9ARK8",
+            "date": {
+                "EN": "8th Sep 2022",
+                "FR": "08 Sep 2022"
+                }
+            
+        },
+        {
+            "title": "ETL and Data Pipelines with Shell, Airflow and Kafka",
+            "organization": "IBM",
+            "organizationImgSrc": "ibm_logo.jpg",
+            "certificateLink": "https://www.coursera.org/account/accomplishments/certificate/H49RBKBBD7U5",
+            "date": {
+                "EN": "18th Sep 2022",
+                "FR": "18 Sep 2022"
+                }
+            
+        }
+      
+    ]
+}

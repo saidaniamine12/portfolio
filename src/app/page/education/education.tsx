@@ -1,6 +1,7 @@
 import InstituteCard from "./institute-card";
 import { useLanguage } from "@/components/custom/language-select.tsx/language-select-provider";
 import instituesData from "./institues-data-en-fr..json";
+import Certifications from "./certifications";
 const languages = {
   EN: [
     {
@@ -66,6 +67,7 @@ const Education = () => {
             ))}
           </div>
         </div>
+        <Certifications />
       </div>
     </div>
   );
