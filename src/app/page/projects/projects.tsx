@@ -15,7 +15,7 @@ const Projects = () => {
         {language === "EN" ? "Projects" : "Projet"}
       </span>
       <div className="flex justify-center ">
-        <div className="flex grid grid-cols-3  gap-5">
+        <div className="flex grid lg:grid-cols-3  md:grid-cols-2  sm:grid-cols-1 gap-5">
           {projectsData.projects.map((project, index) => (
             <GlowWrapper
               key={index}
