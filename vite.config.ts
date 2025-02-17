@@ -10,8 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    host: '0.0.0.0',
-    port: 5173,
-  },
+  base:  '/mohamed-amine-saidani/',
+  // server: {
+  //   host: '0.0.0.0',
+  //   port: 5173,
+  // },
 })
