@@ -76,7 +76,7 @@
             ]
         },
         {
-            "title": "Resume",
+            "title": "Portfolio",
             "description":{
                 "EN": [
                     "Built a dynamic and responsive personal portfolio, showcasing my skills and projects with a modern design.",
@@ -89,7 +89,7 @@
                 ]
         },
         "projectLink": "https://saidaniamine12.github.io/mohamed-amine-saidani",
-        "githubLink": "https://github.com/saidaniamine12/resume" ,
+        "githubLink": "https://github.com/saidaniamine12/portfolio" ,
         "projectImgLink": "cv.png",
         "stack": [
             {
