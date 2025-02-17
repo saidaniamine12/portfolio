@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./dark-mode-toggle.module.css";
 import { useTheme } from "@/components/theme-provider";
 
