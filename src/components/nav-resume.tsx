@@ -20,10 +20,17 @@ export function NavResume() {
   const { language } = useLanguage();
   const downloadPdfResume = async () => {
     try {
+      let response;
+      if (language === "EN") {
+        response = await fetch(
+          "http://localhost:5173/Mohamed_amine_saidani_resume.pdf"
+        );
+      } else {
+        response = await fetch(
+          "http://localhost:5173/Mohamed_amine_saidani_cv.pdf"
+        );
+      }
       // 1. Fetch the PDF file
-      const response = await fetch(
-        "http://localhost:5173/Mohamed_amine_saidani_CV.pdf"
-      );
 
       const pdfArrayBuffer = await response.arrayBuffer();
       const pdfBlob = new Blob([pdfArrayBuffer], { type: "application/pdf" });
@@ -32,7 +39,7 @@ export function NavResume() {
         pdfBlob,
         language === "EN"
           ? "Mohamed_amine_saidani_resume.pdf"
-          : "Mohamed_amine_saidani_CV.pdf"
+          : "Mohamed_amine_saidani_cv.pdf"
       );
       const message =
         language === "EN"
