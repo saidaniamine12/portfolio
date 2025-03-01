@@ -22,13 +22,9 @@ export function NavResume() {
     try {
       let response;
       if (language === "EN") {
-        response = await fetch(
-          "http://localhost:5173/Mohamed_amine_saidani_resume.pdf"
-        );
+        response = await fetch("/Mohamed_amine_saidani_resume.pdf");
       } else {
-        response = await fetch(
-          "http://localhost:5173/Mohamed_amine_saidani_cv.pdf"
-        );
+        response = await fetch("/Mohamed_amine_saidani_cv.pdf");
       }
       // 1. Fetch the PDF file
 
