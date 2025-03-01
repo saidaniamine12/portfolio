@@ -22,9 +22,13 @@ export function NavResume() {
     try {
       let response;
       if (language === "EN") {
-        response = await fetch("/Mohamed_amine_saidani_resume.pdf");
+        response = await fetch(
+          "https://saidaniamine12.github.io/portfolio/Mohamed_amine_saidani_resume.pdf"
+        );
       } else {
-        response = await fetch("/Mohamed_amine_saidani_cv.pdf");
+        response = await fetch(
+          "https://saidaniamine12.github.io/portfolio/Mohamed_amine_saidani_cv.pdf"
+        );
       }
       // 1. Fetch the PDF file
 
